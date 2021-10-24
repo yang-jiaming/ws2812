@@ -1,0 +1,1716 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    startup_stm32f103xe.o(RESET) refers to startup_stm32f103xe.o(STACK) for __initial_sp
+    startup_stm32f103xe.o(RESET) refers to startup_stm32f103xe.o(.text) for Reset_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.NMI_Handler) for NMI_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.HardFault_Handler) for HardFault_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.MemManage_Handler) for MemManage_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.BusFault_Handler) for BusFault_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.UsageFault_Handler) for UsageFault_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.SVC_Handler) for SVC_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.DebugMon_Handler) for DebugMon_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.PendSV_Handler) for PendSV_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.SysTick_Handler) for SysTick_Handler
+    startup_stm32f103xe.o(RESET) refers to stm32f1xx_it.o(i.DMA1_Channel3_IRQHandler) for DMA1_Channel3_IRQHandler
+    startup_stm32f103xe.o(.text) refers to system_stm32f1xx.o(i.SystemInit) for SystemInit
+    startup_stm32f103xe.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    main.o(i.HAL_SYSTICK_Callback) refers to ws2812b_fx.o(i.WS2812BFX_SysTickCallback) for WS2812BFX_SysTickCallback
+    main.o(i.SystemClock_Config) refers to memseta.o(.text) for __aeabi_memclr4
+    main.o(i.SystemClock_Config) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig) for HAL_RCC_OscConfig
+    main.o(i.SystemClock_Config) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) for HAL_RCC_ClockConfig
+    main.o(i.main) refers to stm32f1xx_hal.o(i.HAL_Init) for HAL_Init
+    main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
+    main.o(i.main) refers to gpio.o(i.MX_GPIO_Init) for MX_GPIO_Init
+    main.o(i.main) refers to dma.o(i.MX_DMA_Init) for MX_DMA_Init
+    main.o(i.main) refers to spi.o(i.MX_SPI1_Init) for MX_SPI1_Init
+    main.o(i.main) refers to ws2812b.o(i.WS2812B_Init) for WS2812B_Init
+    main.o(i.main) refers to ws2812b_fx.o(i.WS2812BFX_Init) for WS2812BFX_Init
+    main.o(i.main) refers to ws2812b_fx.o(i.WS2812BFX_SetSpeed) for WS2812BFX_SetSpeed
+    main.o(i.main) refers to ws2812b_fx.o(i.WS2812BFX_SetColorRGB) for WS2812BFX_SetColorRGB
+    main.o(i.main) refers to ws2812b_fx.o(i.WS2812BFX_SetMode) for WS2812BFX_SetMode
+    main.o(i.main) refers to ws2812b_fx.o(i.WS2812BFX_Start) for WS2812BFX_Start
+    main.o(i.main) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
+    main.o(i.main) refers to ws2812b_fx.o(i.WS2812BFX_Callback) for WS2812BFX_Callback
+    main.o(i.main) refers to spi.o(.bss) for hspi1
+    gpio.o(i.MX_GPIO_Init) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    gpio.o(i.MX_GPIO_Init) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    dma.o(i.MX_DMA_Init) refers to stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    dma.o(i.MX_DMA_Init) refers to stm32f1xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ) for HAL_NVIC_EnableIRQ
+    spi.o(i.HAL_SPI_MspDeInit) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
+    spi.o(i.HAL_SPI_MspDeInit) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_DeInit) for HAL_DMA_DeInit
+    spi.o(i.HAL_SPI_MspInit) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    spi.o(i.HAL_SPI_MspInit) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_Init) for HAL_DMA_Init
+    spi.o(i.HAL_SPI_MspInit) refers to main.o(i.Error_Handler) for Error_Handler
+    spi.o(i.HAL_SPI_MspInit) refers to spi.o(.bss) for .bss
+    spi.o(i.MX_SPI1_Init) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Init) for HAL_SPI_Init
+    spi.o(i.MX_SPI1_Init) refers to main.o(i.Error_Handler) for Error_Handler
+    spi.o(i.MX_SPI1_Init) refers to spi.o(.bss) for .bss
+    stm32f1xx_it.o(i.DMA1_Channel3_IRQHandler) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_IRQHandler) for HAL_DMA_IRQHandler
+    stm32f1xx_it.o(i.DMA1_Channel3_IRQHandler) refers to spi.o(.bss) for hdma_spi1_tx
+    stm32f1xx_it.o(i.SysTick_Handler) refers to stm32f1xx_hal.o(i.HAL_IncTick) for HAL_IncTick
+    stm32f1xx_it.o(i.SysTick_Handler) refers to main.o(i.HAL_SYSTICK_Callback) for HAL_SYSTICK_Callback
+    ws2812b.o(i.HAL_SPI_TxCpltCallback) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_DMAStop) for HAL_SPI_DMAStop
+    ws2812b.o(i.HAL_SPI_TxCpltCallback) refers to ws2812b.o(.data) for .data
+    ws2812b.o(i.HAL_SPI_TxCpltCallback) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.HAL_SPI_TxHalfCpltCallback) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_DMAStop) for HAL_SPI_DMAStop
+    ws2812b.o(i.HAL_SPI_TxHalfCpltCallback) refers to ws2812b.o(.data) for .data
+    ws2812b.o(i.HAL_SPI_TxHalfCpltCallback) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.WS2812B_GetColor) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.WS2812B_GetPixels) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.WS2812B_Init) refers to ws2812b.o(.data) for .data
+    ws2812b.o(i.WS2812B_Refresh) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) for HAL_SPI_Transmit_DMA
+    ws2812b.o(i.WS2812B_Refresh) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_GetState) for HAL_DMA_GetState
+    ws2812b.o(i.WS2812B_Refresh) refers to ws2812b.o(.data) for .data
+    ws2812b.o(i.WS2812B_Refresh) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.WS2812B_SetDiodeColor) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.WS2812B_SetDiodeColorStruct) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.WS2812B_SetDiodeHSV) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.WS2812B_SetDiodeRGB) refers to ws2812b.o(.bss) for .bss
+    ws2812b.o(i.gamma8) refers to ws2812b.o(.constdata) for .constdata
+    ws2812b.o(i.sine8) refers to ws2812b.o(.constdata) for .constdata
+    ws2812b_fx.o(i.WS2812BFX_Callback) refers to ws2812b.o(i.WS2812B_Refresh) for WS2812B_Refresh
+    ws2812b_fx.o(i.WS2812BFX_Callback) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_DecreaseSpeed) refers to ws2812b_fx.o(i.WS2812BFX_SetSpeed) for WS2812BFX_SetSpeed
+    ws2812b_fx.o(i.WS2812BFX_DecreaseSpeed) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_GetColorRGB) refers to ws2812b_fx.o(.bss) for .bss
+    ws2812b_fx.o(i.WS2812BFX_GetMode) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_GetReverse) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_GetSegmentSize) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_GetSegmentsQuantity) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_GetSpeed) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_IncreaseSpeed) refers to ws2812b_fx.o(i.WS2812BFX_SetSpeed) for WS2812BFX_SetSpeed
+    ws2812b_fx.o(i.WS2812BFX_IncreaseSpeed) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_Init) refers to calloc.o(.text) for calloc
+    ws2812b_fx.o(i.WS2812BFX_Init) refers to malloc.o(i.free) for free
+    ws2812b_fx.o(i.WS2812BFX_Init) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_IsAnyRunning) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_IsRunning) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_NextMode) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_PrevMode) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SegmentDecrease) refers to ws2812b_fx.o(i.WS2812BFX_Init) for WS2812BFX_Init
+    ws2812b_fx.o(i.WS2812BFX_SegmentDecrease) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SegmentDecreaseEnd) refers to ws2812b_fx.o(i.WS2812BFX_SetAll) for WS2812BFX_SetAll
+    ws2812b_fx.o(i.WS2812BFX_SegmentDecreaseEnd) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SegmentDecreaseStart) refers to ws2812b_fx.o(i.WS2812BFX_SetAll) for WS2812BFX_SetAll
+    ws2812b_fx.o(i.WS2812BFX_SegmentDecreaseStart) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SegmentIncrease) refers to ws2812b_fx.o(i.WS2812BFX_Init) for WS2812BFX_Init
+    ws2812b_fx.o(i.WS2812BFX_SegmentIncrease) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SegmentIncreaseEnd) refers to ws2812b_fx.o(i.WS2812BFX_SetAll) for WS2812BFX_SetAll
+    ws2812b_fx.o(i.WS2812BFX_SegmentIncreaseEnd) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SegmentIncreaseStart) refers to ws2812b_fx.o(i.WS2812BFX_SetAll) for WS2812BFX_SetAll
+    ws2812b_fx.o(i.WS2812BFX_SegmentIncreaseStart) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SetAll) refers to ws2812b.o(i.WS2812B_SetDiodeRGB) for WS2812B_SetDiodeRGB
+    ws2812b_fx.o(i.WS2812BFX_SetAll) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SetAllRGB) refers to ws2812b.o(i.WS2812B_SetDiodeRGB) for WS2812B_SetDiodeRGB
+    ws2812b_fx.o(i.WS2812BFX_SetAllRGB) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SetColor) refers to ws2812b_fx.o(.bss) for .bss
+    ws2812b_fx.o(i.WS2812BFX_SetColorHSV) refers to ws2812b_fx.o(i.WS2812BFX_HSVtoRGB) for WS2812BFX_HSVtoRGB
+    ws2812b_fx.o(i.WS2812BFX_SetColorHSV) refers to ws2812b_fx.o(.bss) for .bss
+    ws2812b_fx.o(i.WS2812BFX_SetColorRGB) refers to ws2812b_fx.o(.bss) for .bss
+    ws2812b_fx.o(i.WS2812BFX_SetColorStruct) refers to ws2812b_fx.o(.bss) for .bss
+    ws2812b_fx.o(i.WS2812BFX_SetMode) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SetMode) refers to ws2812b_fx.o(.bss) for .bss
+    ws2812b_fx.o(i.WS2812BFX_SetReverse) refers to ws2812b_fx.o(i.WS2812BFX_SetAll) for WS2812BFX_SetAll
+    ws2812b_fx.o(i.WS2812BFX_SetReverse) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SetSegmentSize) refers to ws2812b_fx.o(i.WS2812BFX_SetAll) for WS2812BFX_SetAll
+    ws2812b_fx.o(i.WS2812BFX_SetSegmentSize) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SetSpeed) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_Start) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_Stop) refers to ws2812b_fx.o(i.WS2812BFX_IsAnyRunning) for WS2812BFX_IsAnyRunning
+    ws2812b_fx.o(i.WS2812BFX_Stop) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.WS2812BFX_SysTickCallback) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.blink) refers to ws2812b_fx.o(i.WS2812BFX_SetAll) for WS2812BFX_SetAll
+    ws2812b_fx.o(i.blink) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.chase) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.chase) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.color_wipe) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.color_wipe) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.fade_out) refers to ws2812b.o(i.WS2812B_GetColor) for WS2812B_GetColor
+    ws2812b_fx.o(i.fade_out) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.fade_out) refers to ws2812b.o(i.WS2812B_SetDiodeRGB) for WS2812B_SetDiodeRGB
+    ws2812b_fx.o(i.fade_out) refers to ws2812b_fx.o(.constdata) for .constdata
+    ws2812b_fx.o(i.fade_out) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.fire_flicker) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.fire_flicker) refers to ws2812b.o(i.WS2812B_SetDiodeRGB) for WS2812B_SetDiodeRGB
+    ws2812b_fx.o(i.fire_flicker) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.fireworks) refers to ws2812b_fx.o(i.fade_out) for fade_out
+    ws2812b_fx.o(i.fireworks) refers to ws2812b.o(i.WS2812B_GetPixels) for WS2812B_GetPixels
+    ws2812b_fx.o(i.fireworks) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.fireworks) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.fireworks) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.get_random_wheel_index) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_bicolor_chase) refers to ws2812b_fx.o(i.chase) for chase
+    ws2812b_fx.o(i.mode_bicolor_chase) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_black_to_color) refers to ws2812b_fx.o(i.to_color) for to_color
+    ws2812b_fx.o(i.mode_blink) refers to ws2812b_fx.o(i.blink) for blink
+    ws2812b_fx.o(i.mode_blink) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_blink_rainbow) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_blink_rainbow) refers to ws2812b_fx.o(i.blink) for blink
+    ws2812b_fx.o(i.mode_blink_rainbow) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_breath) refers to ws2812b_fx.o(i.WS2812BFX_SetAllRGB) for WS2812BFX_SetAllRGB
+    ws2812b_fx.o(i.mode_breath) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_blackout) refers to ws2812b_fx.o(i.chase) for chase
+    ws2812b_fx.o(i.mode_chase_blackout) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_blackout_rainbow) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_chase_blackout_rainbow) refers to ws2812b_fx.o(i.chase) for chase
+    ws2812b_fx.o(i.mode_chase_blackout_rainbow) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_color) refers to ws2812b_fx.o(i.chase) for chase
+    ws2812b_fx.o(i.mode_chase_color) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_flash) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_chase_flash) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_flash_random) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_chase_flash_random) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_chase_flash_random) refers to ws2812b_fx.o(i.get_random_wheel_index) for get_random_wheel_index
+    ws2812b_fx.o(i.mode_chase_flash_random) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_rainbow) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_chase_rainbow) refers to ws2812b_fx.o(i.chase) for chase
+    ws2812b_fx.o(i.mode_chase_rainbow) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_rainbow_white) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_chase_rainbow_white) refers to ws2812b_fx.o(i.chase) for chase
+    ws2812b_fx.o(i.mode_chase_rainbow_white) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_random) refers to ws2812b_fx.o(i.get_random_wheel_index) for get_random_wheel_index
+    ws2812b_fx.o(i.mode_chase_random) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_chase_random) refers to ws2812b_fx.o(i.chase) for chase
+    ws2812b_fx.o(i.mode_chase_random) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_chase_white) refers to ws2812b_fx.o(i.chase) for chase
+    ws2812b_fx.o(i.mode_chase_white) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_circus_combustus) refers to ws2812b_fx.o(i.tricolor_chase) for tricolor_chase
+    ws2812b_fx.o(i.mode_color_sweep_random) refers to ws2812b_fx.o(i.get_random_wheel_index) for get_random_wheel_index
+    ws2812b_fx.o(i.mode_color_sweep_random) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_color_sweep_random) refers to ws2812b_fx.o(i.color_wipe) for color_wipe
+    ws2812b_fx.o(i.mode_color_sweep_random) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_color_wipe) refers to ws2812b_fx.o(i.color_wipe) for color_wipe
+    ws2812b_fx.o(i.mode_color_wipe) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_color_wipe_inv) refers to ws2812b_fx.o(i.color_wipe) for color_wipe
+    ws2812b_fx.o(i.mode_color_wipe_inv) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_color_wipe_random) refers to ws2812b_fx.o(i.get_random_wheel_index) for get_random_wheel_index
+    ws2812b_fx.o(i.mode_color_wipe_random) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_color_wipe_random) refers to ws2812b_fx.o(i.color_wipe) for color_wipe
+    ws2812b_fx.o(i.mode_color_wipe_random) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_color_wipe_rev) refers to ws2812b_fx.o(i.color_wipe) for color_wipe
+    ws2812b_fx.o(i.mode_color_wipe_rev) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_color_wipe_rev_inv) refers to ws2812b_fx.o(i.color_wipe) for color_wipe
+    ws2812b_fx.o(i.mode_color_wipe_rev_inv) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_comet) refers to ws2812b_fx.o(i.fade_out) for fade_out
+    ws2812b_fx.o(i.mode_comet) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_comet) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_dual_scan) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_dual_scan) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_fade) refers to ws2812b_fx.o(i.color_blend) for color_blend
+    ws2812b_fx.o(i.mode_fade) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_fade) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_fire_flicker) refers to ws2812b_fx.o(i.fire_flicker) for fire_flicker
+    ws2812b_fx.o(i.mode_fire_flicker_intense) refers to ws2812b_fx.o(i.fire_flicker) for fire_flicker
+    ws2812b_fx.o(i.mode_fire_flicker_soft) refers to ws2812b_fx.o(i.fire_flicker) for fire_flicker
+    ws2812b_fx.o(i.mode_fireworks) refers to ws2812b_fx.o(i.fireworks) for fireworks
+    ws2812b_fx.o(i.mode_fireworks) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_fireworks_random) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_fireworks_random) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_fireworks_random) refers to ws2812b_fx.o(i.fireworks) for fireworks
+    ws2812b_fx.o(i.mode_flash_sparkle) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_flash_sparkle) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_flash_sparkle) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_halloween) refers to ws2812b_fx.o(i.running) for running
+    ws2812b_fx.o(i.mode_hyper_sparkle) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_hyper_sparkle) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_hyper_sparkle) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_icu) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_icu) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_icu) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_larson_scanner) refers to ws2812b_fx.o(i.fade_out) for fade_out
+    ws2812b_fx.o(i.mode_larson_scanner) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_larson_scanner) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_merry_christmas) refers to ws2812b_fx.o(i.running) for running
+    ws2812b_fx.o(i.mode_multi_dynamic) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_multi_dynamic) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_multi_dynamic) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_multi_dynamic) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_multi_strobe) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_multi_strobe) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_rainbow) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_rainbow) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_rainbow) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_rainbow_cycle) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_rainbow_cycle) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_rainbow_cycle) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_random_color) refers to ws2812b_fx.o(i.get_random_wheel_index) for get_random_wheel_index
+    ws2812b_fx.o(i.mode_random_color) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_random_color) refers to ws2812b_fx.o(i.WS2812BFX_SetAll) for WS2812BFX_SetAll
+    ws2812b_fx.o(i.mode_random_color) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_running_color) refers to ws2812b_fx.o(i.running) for running
+    ws2812b_fx.o(i.mode_running_color) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_running_lights) refers to ws2812b.o(i.sine8) for sine8
+    ws2812b_fx.o(i.mode_running_lights) refers to ws2812b.o(i.WS2812B_SetDiodeRGB) for WS2812B_SetDiodeRGB
+    ws2812b_fx.o(i.mode_running_lights) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_running_random) refers to ws2812b.o(i.WS2812B_GetColor) for WS2812B_GetColor
+    ws2812b_fx.o(i.mode_running_random) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_running_random) refers to ws2812b_fx.o(i.get_random_wheel_index) for get_random_wheel_index
+    ws2812b_fx.o(i.mode_running_random) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_running_random) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_running_red_blue) refers to ws2812b_fx.o(i.running) for running
+    ws2812b_fx.o(i.mode_scan) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_scan) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_single_dynamic) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_single_dynamic) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_single_dynamic) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_single_dynamic) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_sparkle) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.mode_sparkle) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_sparkle) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_static) refers to ws2812b.o(i.WS2812B_SetDiodeColorStruct) for WS2812B_SetDiodeColorStruct
+    ws2812b_fx.o(i.mode_static) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_strobe) refers to ws2812b_fx.o(i.blink) for blink
+    ws2812b_fx.o(i.mode_strobe) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_strobe_rainbow) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_strobe_rainbow) refers to ws2812b_fx.o(i.blink) for blink
+    ws2812b_fx.o(i.mode_strobe_rainbow) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_theater_chase) refers to ws2812b_fx.o(i.theater_chase) for theater_chase
+    ws2812b_fx.o(i.mode_theater_chase) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_theater_chase_rainbow) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_theater_chase_rainbow) refers to ws2812b_fx.o(i.theater_chase) for theater_chase
+    ws2812b_fx.o(i.mode_theater_chase_rainbow) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_tricolor_chase) refers to ws2812b_fx.o(i.tricolor_chase) for tricolor_chase
+    ws2812b_fx.o(i.mode_tricolor_chase) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_twinkle) refers to ws2812b_fx.o(i.twinkle) for twinkle
+    ws2812b_fx.o(i.mode_twinkle) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_twinkle_fade) refers to ws2812b_fx.o(i.twinkle_fade) for twinkle_fade
+    ws2812b_fx.o(i.mode_twinkle_fade) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_twinkle_fade_random) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_twinkle_fade_random) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_twinkle_fade_random) refers to ws2812b_fx.o(i.twinkle_fade) for twinkle_fade
+    ws2812b_fx.o(i.mode_twinkle_random) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.mode_twinkle_random) refers to ws2812b_fx.o(i.color_wheel) for color_wheel
+    ws2812b_fx.o(i.mode_twinkle_random) refers to ws2812b_fx.o(i.twinkle) for twinkle
+    ws2812b_fx.o(i.mode_twinkle_random) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.mode_white_to_color) refers to ws2812b_fx.o(i.to_color) for to_color
+    ws2812b_fx.o(i.running) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.running) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.strip_off) refers to ws2812b.o(i.WS2812B_SetDiodeRGB) for WS2812B_SetDiodeRGB
+    ws2812b_fx.o(i.strip_off) refers to ws2812b.o(i.WS2812B_Refresh) for WS2812B_Refresh
+    ws2812b_fx.o(i.theater_chase) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.theater_chase) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.to_color) refers to ws2812b_fx.o(i.WS2812BFX_RGBtoHSV) for WS2812BFX_RGBtoHSV
+    ws2812b_fx.o(i.to_color) refers to ws2812b_fx.o(i.WS2812BFX_HSVtoRGB) for WS2812BFX_HSVtoRGB
+    ws2812b_fx.o(i.to_color) refers to ws2812b_fx.o(i.WS2812BFX_SetAllRGB) for WS2812BFX_SetAllRGB
+    ws2812b_fx.o(i.to_color) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.tricolor_chase) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.tricolor_chase) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.twinkle) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.twinkle) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.twinkle) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(i.twinkle_fade) refers to ws2812b_fx.o(i.fade_out) for fade_out
+    ws2812b_fx.o(i.twinkle_fade) refers to rand.o(.text) for rand
+    ws2812b_fx.o(i.twinkle_fade) refers to ws2812b.o(i.WS2812B_SetDiodeColor) for WS2812B_SetDiodeColor
+    ws2812b_fx.o(i.twinkle_fade) refers to ws2812b_fx.o(.data) for .data
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_static) for mode_static
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_white_to_color) for mode_white_to_color
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_black_to_color) for mode_black_to_color
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_blink) for mode_blink
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_blink_rainbow) for mode_blink_rainbow
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_strobe) for mode_strobe
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_strobe_rainbow) for mode_strobe_rainbow
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_breath) for mode_breath
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_color_wipe) for mode_color_wipe
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_color_wipe_inv) for mode_color_wipe_inv
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_color_wipe_rev) for mode_color_wipe_rev
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_color_wipe_rev_inv) for mode_color_wipe_rev_inv
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_color_wipe_random) for mode_color_wipe_random
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_color_sweep_random) for mode_color_sweep_random
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_random_color) for mode_random_color
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_single_dynamic) for mode_single_dynamic
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_multi_dynamic) for mode_multi_dynamic
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_rainbow) for mode_rainbow
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_rainbow_cycle) for mode_rainbow_cycle
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_fade) for mode_fade
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_scan) for mode_scan
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_dual_scan) for mode_dual_scan
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_theater_chase) for mode_theater_chase
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_theater_chase_rainbow) for mode_theater_chase_rainbow
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_running_lights) for mode_running_lights
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_twinkle) for mode_twinkle
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_twinkle_random) for mode_twinkle_random
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_twinkle_fade) for mode_twinkle_fade
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_twinkle_fade_random) for mode_twinkle_fade_random
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_sparkle) for mode_sparkle
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_flash_sparkle) for mode_flash_sparkle
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_hyper_sparkle) for mode_hyper_sparkle
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_multi_strobe) for mode_multi_strobe
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_white) for mode_chase_white
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_color) for mode_chase_color
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_random) for mode_chase_random
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_rainbow) for mode_chase_rainbow
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_flash) for mode_chase_flash
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_flash_random) for mode_chase_flash_random
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_rainbow_white) for mode_chase_rainbow_white
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_blackout) for mode_chase_blackout
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_chase_blackout_rainbow) for mode_chase_blackout_rainbow
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_running_color) for mode_running_color
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_running_red_blue) for mode_running_red_blue
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_running_random) for mode_running_random
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_larson_scanner) for mode_larson_scanner
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_comet) for mode_comet
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_fireworks) for mode_fireworks
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_fireworks_random) for mode_fireworks_random
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_merry_christmas) for mode_merry_christmas
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_fire_flicker) for mode_fire_flicker
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_fire_flicker_soft) for mode_fire_flicker_soft
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_fire_flicker_intense) for mode_fire_flicker_intense
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_circus_combustus) for mode_circus_combustus
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_halloween) for mode_halloween
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_bicolor_chase) for mode_bicolor_chase
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_tricolor_chase) for mode_tricolor_chase
+    ws2812b_fx.o(.data) refers to ws2812b_fx.o(i.mode_icu) for mode_icu
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort) refers to stm32f1xx_hal_spi.o(i.SPI_AbortTx_ISR) for SPI_AbortTx_ISR
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort) refers to stm32f1xx_hal_spi.o(i.SPI_AbortRx_ISR) for SPI_AbortRx_ISR
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_AbortCpltCallback) for HAL_SPI_AbortCpltCallback
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f1xx_hal_spi.o(i.SPI_AbortTx_ISR) for SPI_AbortTx_ISR
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f1xx_hal_spi.o(i.SPI_AbortRx_ISR) for SPI_AbortRx_ISR
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f1xx_hal_spi.o(i.SPI_DMATxAbortCallback) for SPI_DMATxAbortCallback
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Abort_IT) refers to stm32f1xx_hal_spi.o(i.SPI_DMARxAbortCallback) for SPI_DMARxAbortCallback
+    stm32f1xx_hal_spi.o(i.HAL_SPI_DMAStop) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_Abort) for HAL_DMA_Abort
+    stm32f1xx_hal_spi.o(i.HAL_SPI_DeInit) refers to spi.o(i.HAL_SPI_MspDeInit) for HAL_SPI_MspDeInit
+    stm32f1xx_hal_spi.o(i.HAL_SPI_IRQHandler) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_Abort_IT) for HAL_DMA_Abort_IT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_IRQHandler) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.HAL_SPI_IRQHandler) refers to stm32f1xx_hal_spi.o(i.SPI_DMAAbortOnError) for SPI_DMAAbortOnError
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Init) refers to spi.o(i.HAL_SPI_MspInit) for HAL_SPI_MspInit
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive) for HAL_SPI_TransmitReceive
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTransaction) for SPI_EndRxTransaction
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) for HAL_SPI_TransmitReceive_DMA
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAHalfReceiveCplt) for SPI_DMAHalfReceiveCplt
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAReceiveCplt) for SPI_DMAReceiveCplt
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAError) for SPI_DMAError
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_IT) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) for HAL_SPI_TransmitReceive_IT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_IT) refers to stm32f1xx_hal_spi.o(i.SPI_RxISR_16BIT) for SPI_RxISR_16BIT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_IT) refers to stm32f1xx_hal_spi.o(i.SPI_RxISR_8BIT) for SPI_RxISR_8BIT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAHalfTransmitReceiveCplt) for SPI_DMAHalfTransmitReceiveCplt
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) for SPI_DMATransmitReceiveCplt
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAError) for SPI_DMAError
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAHalfReceiveCplt) for SPI_DMAHalfReceiveCplt
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAReceiveCplt) for SPI_DMAReceiveCplt
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) refers to stm32f1xx_hal_spi.o(i.SPI_2linesRxISR_16BIT) for SPI_2linesRxISR_16BIT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) refers to stm32f1xx_hal_spi.o(i.SPI_2linesTxISR_16BIT) for SPI_2linesTxISR_16BIT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) refers to stm32f1xx_hal_spi.o(i.SPI_2linesRxISR_8BIT) for SPI_2linesRxISR_8BIT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT) refers to stm32f1xx_hal_spi.o(i.SPI_2linesTxISR_8BIT) for SPI_2linesTxISR_8BIT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) refers to stm32f1xx_hal_dma.o(i.HAL_DMA_Start_IT) for HAL_DMA_Start_IT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAHalfTransmitCplt) for SPI_DMAHalfTransmitCplt
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMATransmitCplt) for SPI_DMATransmitCplt
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_DMA) refers to stm32f1xx_hal_spi.o(i.SPI_DMAError) for SPI_DMAError
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_IT) refers to stm32f1xx_hal_spi.o(i.SPI_TxISR_16BIT) for SPI_TxISR_16BIT
+    stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_IT) refers to stm32f1xx_hal_spi.o(i.SPI_TxISR_8BIT) for SPI_TxISR_8BIT
+    stm32f1xx_hal_spi.o(i.SPI_2linesRxISR_16BIT) refers to stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) for SPI_CloseRxTx_ISR
+    stm32f1xx_hal_spi.o(i.SPI_2linesRxISR_8BIT) refers to stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) for SPI_CloseRxTx_ISR
+    stm32f1xx_hal_spi.o(i.SPI_2linesTxISR_16BIT) refers to stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) for SPI_CloseRxTx_ISR
+    stm32f1xx_hal_spi.o(i.SPI_2linesTxISR_8BIT) refers to stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) for SPI_CloseRxTx_ISR
+    stm32f1xx_hal_spi.o(i.SPI_AbortRx_ISR) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_TxRxCpltCallback) for HAL_SPI_TxRxCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_RxCpltCallback) for HAL_SPI_RxCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_spi.o(i.SPI_CloseRx_ISR) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.SPI_CloseRx_ISR) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTransaction) for SPI_EndRxTransaction
+    stm32f1xx_hal_spi.o(i.SPI_CloseRx_ISR) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.SPI_CloseRx_ISR) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_RxCpltCallback) for HAL_SPI_RxCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f1xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to ws2812b.o(i.HAL_SPI_TxCpltCallback) for HAL_SPI_TxCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_CloseTx_ISR) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_spi.o(i.SPI_DMAAbortOnError) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMAError) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMAHalfReceiveCplt) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_RxHalfCpltCallback) for HAL_SPI_RxHalfCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMAHalfTransmitCplt) refers to ws2812b.o(i.HAL_SPI_TxHalfCpltCallback) for HAL_SPI_TxHalfCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMAHalfTransmitReceiveCplt) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_TxRxHalfCpltCallback) for HAL_SPI_TxRxHalfCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMAReceiveCplt) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.SPI_DMAReceiveCplt) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTransaction) for SPI_EndRxTransaction
+    stm32f1xx_hal_spi.o(i.SPI_DMAReceiveCplt) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMAReceiveCplt) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_RxCpltCallback) for HAL_SPI_RxCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMARxAbortCallback) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.SPI_DMARxAbortCallback) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f1xx_hal_spi.o(i.SPI_DMARxAbortCallback) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_AbortCpltCallback) for HAL_SPI_AbortCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMATransmitCplt) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.SPI_DMATransmitCplt) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f1xx_hal_spi.o(i.SPI_DMATransmitCplt) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMATransmitCplt) refers to ws2812b.o(i.HAL_SPI_TxCpltCallback) for HAL_SPI_TxCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) refers to stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction) for SPI_EndRxTxTransaction
+    stm32f1xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback) for HAL_SPI_ErrorCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_TxRxCpltCallback) for HAL_SPI_TxRxCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMATxAbortCallback) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_AbortCpltCallback) for HAL_SPI_AbortCpltCallback
+    stm32f1xx_hal_spi.o(i.SPI_DMATxAbortCallback) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_spi.o(i.SPI_EndRxTransaction) refers to stm32f1xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout) for SPI_WaitFlagStateUntilTimeout
+    stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction) refers to stm32f1xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout) for SPI_WaitFlagStateUntilTimeout
+    stm32f1xx_hal_spi.o(i.SPI_RxISR_16BIT) refers to stm32f1xx_hal_spi.o(i.SPI_CloseRx_ISR) for SPI_CloseRx_ISR
+    stm32f1xx_hal_spi.o(i.SPI_RxISR_8BIT) refers to stm32f1xx_hal_spi.o(i.SPI_CloseRx_ISR) for SPI_CloseRx_ISR
+    stm32f1xx_hal_spi.o(i.SPI_TxISR_16BIT) refers to stm32f1xx_hal_spi.o(i.SPI_CloseTx_ISR) for SPI_CloseTx_ISR
+    stm32f1xx_hal_spi.o(i.SPI_TxISR_8BIT) refers to stm32f1xx_hal_spi.o(i.SPI_CloseTx_ISR) for SPI_CloseTx_ISR
+    stm32f1xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal.o(i.HAL_DeInit) refers to stm32f1xx_hal.o(i.HAL_MspDeInit) for HAL_MspDeInit
+    stm32f1xx_hal.o(i.HAL_Delay) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal.o(i.HAL_Delay) refers to stm32f1xx_hal.o(.data) for .data
+    stm32f1xx_hal.o(i.HAL_GetTick) refers to stm32f1xx_hal.o(.data) for .data
+    stm32f1xx_hal.o(i.HAL_GetTickFreq) refers to stm32f1xx_hal.o(.data) for .data
+    stm32f1xx_hal.o(i.HAL_GetTickPrio) refers to stm32f1xx_hal.o(.data) for .data
+    stm32f1xx_hal.o(i.HAL_IncTick) refers to stm32f1xx_hal.o(.data) for .data
+    stm32f1xx_hal.o(i.HAL_Init) refers to stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping) for HAL_NVIC_SetPriorityGrouping
+    stm32f1xx_hal.o(i.HAL_Init) refers to stm32f1xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f1xx_hal.o(i.HAL_Init) refers to stm32f1xx_hal_msp.o(i.HAL_MspInit) for HAL_MspInit
+    stm32f1xx_hal.o(i.HAL_InitTick) refers to stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config) for HAL_SYSTICK_Config
+    stm32f1xx_hal.o(i.HAL_InitTick) refers to stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority) for HAL_NVIC_SetPriority
+    stm32f1xx_hal.o(i.HAL_InitTick) refers to stm32f1xx_hal.o(.data) for .data
+    stm32f1xx_hal.o(i.HAL_InitTick) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal.o(i.HAL_SetTickFreq) refers to stm32f1xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f1xx_hal.o(i.HAL_SetTickFreq) refers to stm32f1xx_hal.o(.data) for .data
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq) for HAL_RCC_GetSysClockFreq
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f1xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to system_stm32f1xx.o(.constdata) for AHBPrescTable
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) refers to stm32f1xx_hal.o(.data) for uwTickPrio
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_DeInit) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_DeInit) refers to stm32f1xx_hal.o(i.HAL_InitTick) for HAL_InitTick
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_DeInit) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_DeInit) refers to stm32f1xx_hal.o(.data) for uwTickPrio
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq) refers to system_stm32f1xx.o(.constdata) for APBPrescTable
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq) refers to system_stm32f1xx.o(.constdata) for APBPrescTable
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_MCOConfig) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_NMI_IRQHandler) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_CSSCallback) for HAL_RCC_CSSCallback
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    stm32f1xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq) for HAL_RCC_GetPCLK2Freq
+    stm32f1xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq) for HAL_RCC_GetSysClockFreq
+    stm32f1xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback) for HAL_GPIO_EXTI_Callback
+    stm32f1xx_hal_dma.o(i.HAL_DMA_PollForTransfer) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_dma.o(i.HAL_DMA_Start) refers to stm32f1xx_hal_dma.o(i.DMA_SetConfig) for DMA_SetConfig
+    stm32f1xx_hal_dma.o(i.HAL_DMA_Start_IT) refers to stm32f1xx_hal_dma.o(i.DMA_SetConfig) for DMA_SetConfig
+    stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority) refers to stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config) refers to stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler) refers to main.o(i.HAL_SYSTICK_Callback) for HAL_SYSTICK_Callback
+    stm32f1xx_hal_pwr.o(i.HAL_PWR_EnterSTOPMode) refers to stm32f1xx_hal_pwr.o(i.PWR_OverloadWfe) for PWR_OverloadWfe
+    stm32f1xx_hal_pwr.o(i.HAL_PWR_PVD_IRQHandler) refers to stm32f1xx_hal_pwr.o(i.HAL_PWR_PVDCallback) for HAL_PWR_PVDCallback
+    stm32f1xx_hal_flash.o(i.FLASH_Program_HalfWord) refers to stm32f1xx_hal_flash.o(.bss) for .bss
+    stm32f1xx_hal_flash.o(i.FLASH_SetErrorCode) refers to stm32f1xx_hal_flash.o(.bss) for .bss
+    stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) refers to stm32f1xx_hal_flash.o(i.FLASH_SetErrorCode) for FLASH_SetErrorCode
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_GetError) refers to stm32f1xx_hal_flash.o(.bss) for .bss
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f1xx_hal_flash.o(i.FLASH_SetErrorCode) for FLASH_SetErrorCode
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f1xx_hal_flash.o(i.HAL_FLASH_OperationErrorCallback) for HAL_FLASH_OperationErrorCallback
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f1xx_hal_flash.o(i.FLASH_Program_HalfWord) for FLASH_Program_HalfWord
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f1xx_hal_flash.o(i.HAL_FLASH_EndOfOperationCallback) for HAL_FLASH_EndOfOperationCallback
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_PageErase) for FLASH_PageErase
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_IRQHandler) refers to stm32f1xx_hal_flash.o(.bss) for .bss
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_OB_Launch) refers to stm32f1xx_hal_cortex.o(i.HAL_NVIC_SystemReset) for HAL_NVIC_SystemReset
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_Program) refers to llushr.o(.text) for __aeabi_llsr
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f1xx_hal_flash.o(i.FLASH_Program_HalfWord) for FLASH_Program_HalfWord
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_Program) refers to stm32f1xx_hal_flash.o(.bss) for .bss
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f1xx_hal_flash.o(i.FLASH_Program_HalfWord) for FLASH_Program_HalfWord
+    stm32f1xx_hal_flash.o(i.HAL_FLASH_Program_IT) refers to stm32f1xx_hal_flash.o(.bss) for .bss
+    stm32f1xx_hal_flash_ex.o(i.FLASH_MassErase) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    stm32f1xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP) refers to stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f1xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP) refers to stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) for HAL_FLASHEx_OBErase
+    stm32f1xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    stm32f1xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP) refers to stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f1xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP) refers to stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) for HAL_FLASHEx_OBErase
+    stm32f1xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    stm32f1xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig) refers to stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f1xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    stm32f1xx_hal_flash_ex.o(i.FLASH_PageErase) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_MassErase) for FLASH_MassErase
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_PageErase) for FLASH_PageErase
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_PageErase) for FLASH_PageErase
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_MassErase) for FLASH_MassErase
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_OB_GetRDP) for FLASH_OB_GetRDP
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) refers to stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig) for FLASH_OB_RDP_LevelConfig
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBGetConfig) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_OB_GetRDP) for FLASH_OB_GetRDP
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP) for FLASH_OB_DisableWRP
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP) for FLASH_OB_EnableWRP
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f1xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig) for FLASH_OB_RDP_LevelConfig
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation) for FLASH_WaitForLastOperation
+    stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
+    system_stm32f1xx.o(i.SystemCoreClockUpdate) refers to system_stm32f1xx.o(.data) for .data
+    system_stm32f1xx.o(i.SystemCoreClockUpdate) refers to system_stm32f1xx.o(.constdata) for .constdata
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    rand.o(.text) refers to rand.o(.data) for .data
+    malloc.o(i.free) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocr.o(i.__free$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.__malloc$realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocr.o(i.__malloc$realloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocr.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.realloc) refers to mallocr.o(i.__free$realloc) for __free$realloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.__malloc$realloc) for __malloc$realloc
+    mallocr.o(i.realloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    malloca.o(i.__free$memalign) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__malloc$memalign) refers to malloca.o(i.__aligned_malloc) for __aligned_malloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocra.o(i.__aligned_malloc$realloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__free$realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__malloc$realloc$memalign) refers to mallocra.o(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__free$realloc$memalign) for __free$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    calloc.o(.text) refers to malloc.o(i.malloc) for malloc
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f103xe.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f103xe.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.rev16_text), (4 bytes).
+    Removing main.o(.revsh_text), (4 bytes).
+    Removing main.o(.rrx_text), (6 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(.rrx_text), (6 bytes).
+    Removing dma.o(.rev16_text), (4 bytes).
+    Removing dma.o(.revsh_text), (4 bytes).
+    Removing dma.o(.rrx_text), (6 bytes).
+    Removing spi.o(.rev16_text), (4 bytes).
+    Removing spi.o(.revsh_text), (4 bytes).
+    Removing spi.o(.rrx_text), (6 bytes).
+    Removing spi.o(i.HAL_SPI_MspDeInit), (56 bytes).
+    Removing stm32f1xx_it.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_it.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_it.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_msp.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_msp.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_msp.o(.rrx_text), (6 bytes).
+    Removing ws2812b.o(.rev16_text), (4 bytes).
+    Removing ws2812b.o(.revsh_text), (4 bytes).
+    Removing ws2812b.o(.rrx_text), (6 bytes).
+    Removing ws2812b.o(i.WS2812B_SetDiodeHSV), (168 bytes).
+    Removing ws2812b.o(i.gamma8), (12 bytes).
+    Removing ws2812b_fx.o(.rev16_text), (4 bytes).
+    Removing ws2812b_fx.o(.revsh_text), (4 bytes).
+    Removing ws2812b_fx.o(.rrx_text), (6 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_DecreaseSpeed), (36 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_GetColorRGB), (40 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_GetMode), (40 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_GetReverse), (44 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_GetSegmentSize), (52 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_GetSegmentsQuantity), (12 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_GetSpeed), (40 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_IncreaseSpeed), (36 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_IsAnyRunning), (52 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_IsRunning), (44 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_NextMode), (96 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_PrevMode), (100 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SegmentDecrease), (32 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SegmentDecreaseEnd), (60 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SegmentDecreaseStart), (76 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SegmentIncrease), (32 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SegmentIncreaseEnd), (76 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SegmentIncreaseStart), (60 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SetColor), (32 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SetColorHSV), (72 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SetColorStruct), (48 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SetReverse), (56 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_SetSegmentSize), (72 bytes).
+    Removing ws2812b_fx.o(i.WS2812BFX_Stop), (48 bytes).
+    Removing ws2812b_fx.o(i.strip_off), (32 bytes).
+    Removing ws2812b_fx.o(.data), (4 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(i.HAL_GPIOEx_ConfigEventout), (20 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(i.HAL_GPIOEx_DisableEventout), (16 bytes).
+    Removing stm32f1xx_hal_gpio_ex.o(i.HAL_GPIOEx_EnableEventout), (16 bytes).
+    Removing stm32f1xx_hal_spi.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_spi.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_spi.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_Abort), (288 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_AbortCpltCallback), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_Abort_IT), (288 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_DMAPause), (38 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_DMAResume), (38 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_DeInit), (46 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_GetError), (4 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_GetState), (6 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_IRQHandler), (224 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_MspDeInit), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_MspInit), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_Receive), (346 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_DMA), (244 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_Receive_IT), (176 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_RxCpltCallback), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_RxHalfCpltCallback), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit), (358 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive), (482 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_DMA), (292 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_TransmitReceive_IT), (164 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_IT), (148 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_TxCpltCallback), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_TxHalfCpltCallback), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_TxRxCpltCallback), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.HAL_SPI_TxRxHalfCpltCallback), (2 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_2linesRxISR_16BIT), (48 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_2linesRxISR_8BIT), (48 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_2linesTxISR_16BIT), (48 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_2linesTxISR_8BIT), (48 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_AbortRx_ISR), (88 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_AbortTx_ISR), (28 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_CloseRxTx_ISR), (144 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_CloseRx_ISR), (76 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_CloseTx_ISR), (124 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_DMAAbortOnError), (16 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_DMAHalfReceiveCplt), (10 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_DMAHalfTransmitReceiveCplt), (10 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_DMAReceiveCplt), (106 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_DMARxAbortCallback), (98 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_DMATransmitReceiveCplt), (90 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_DMATxAbortCallback), (112 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_EndRxTransaction), (92 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_RxISR_16BIT), (32 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_RxISR_8BIT), (32 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_TxISR_16BIT), (32 bytes).
+    Removing stm32f1xx_hal_spi.o(i.SPI_TxISR_8BIT), (32 bytes).
+    Removing stm32f1xx_hal.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_DBGMCU_DisableDBGSleepMode), (16 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_DBGMCU_DisableDBGStandbyMode), (16 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_DBGMCU_DisableDBGStopMode), (16 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_DBGMCU_EnableDBGSleepMode), (16 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_DBGMCU_EnableDBGStandbyMode), (16 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_DBGMCU_EnableDBGStopMode), (16 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_DeInit), (32 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_GetDEVID), (16 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_GetHalVersion), (8 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_GetREVID), (12 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_GetTickFreq), (12 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_GetTickPrio), (12 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_GetUIDw0), (12 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_GetUIDw1), (12 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_GetUIDw2), (12 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_MspDeInit), (2 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_MspInit), (2 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_ResumeTick), (14 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_SetTickFreq), (36 bytes).
+    Removing stm32f1xx_hal.o(i.HAL_SuspendTick), (14 bytes).
+    Removing stm32f1xx_hal_rcc.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_rcc.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_rcc.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_CSSCallback), (2 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_DeInit), (220 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_DisableCSS), (12 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_EnableCSS), (12 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_GetClockConfig), (64 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq), (12 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_GetOscConfig), (144 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq), (32 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq), (32 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_MCOConfig), (72 bytes).
+    Removing stm32f1xx_hal_rcc.o(i.HAL_RCC_NMI_IRQHandler), (24 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKConfig), (52 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(i.HAL_RCCEx_GetPeriphCLKFreq), (212 bytes).
+    Removing stm32f1xx_hal_rcc_ex.o(i.HAL_RCCEx_PeriphCLKConfig), (236 bytes).
+    Removing stm32f1xx_hal_gpio.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_gpio.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_gpio.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_gpio.o(i.HAL_GPIO_DeInit), (288 bytes).
+    Removing stm32f1xx_hal_gpio.o(i.HAL_GPIO_EXTI_Callback), (2 bytes).
+    Removing stm32f1xx_hal_gpio.o(i.HAL_GPIO_EXTI_IRQHandler), (24 bytes).
+    Removing stm32f1xx_hal_gpio.o(i.HAL_GPIO_LockPin), (34 bytes).
+    Removing stm32f1xx_hal_gpio.o(i.HAL_GPIO_ReadPin), (10 bytes).
+    Removing stm32f1xx_hal_gpio.o(i.HAL_GPIO_TogglePin), (16 bytes).
+    Removing stm32f1xx_hal_dma.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_dma.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_dma.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_dma.o(i.HAL_DMA_Abort_IT), (304 bytes).
+    Removing stm32f1xx_hal_dma.o(i.HAL_DMA_DeInit), (128 bytes).
+    Removing stm32f1xx_hal_dma.o(i.HAL_DMA_GetError), (4 bytes).
+    Removing stm32f1xx_hal_dma.o(i.HAL_DMA_PollForTransfer), (988 bytes).
+    Removing stm32f1xx_hal_dma.o(i.HAL_DMA_RegisterCallback), (74 bytes).
+    Removing stm32f1xx_hal_dma.o(i.HAL_DMA_Start), (80 bytes).
+    Removing stm32f1xx_hal_dma.o(i.HAL_DMA_UnRegisterCallback), (82 bytes).
+    Removing stm32f1xx_hal_cortex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_cortex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_cortex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_NVIC_ClearPendingIRQ), (26 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_NVIC_DisableIRQ), (34 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_NVIC_GetActive), (36 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_NVIC_GetPendingIRQ), (36 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_NVIC_GetPriority), (82 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_NVIC_GetPriorityGrouping), (16 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPendingIRQ), (26 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_NVIC_SystemReset), (36 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_CLKSourceConfig), (24 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Callback), (2 bytes).
+    Removing stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler), (8 bytes).
+    Removing stm32f1xx_hal_pwr.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_pwr.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_pwr.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_ConfigPVD), (124 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_DeInit), (24 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_DisableBkUpAccess), (12 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_DisablePVD), (12 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_DisableSEVOnPend), (16 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_DisableSleepOnExit), (16 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_DisableWakeUpPin), (28 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_EnableBkUpAccess), (12 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_EnablePVD), (12 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_EnableSEVOnPend), (16 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_EnableSleepOnExit), (16 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_EnableWakeUpPin), (28 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_EnterSLEEPMode), (32 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_EnterSTANDBYMode), (32 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_EnterSTOPMode), (68 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_PVDCallback), (2 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.HAL_PWR_PVD_IRQHandler), (28 bytes).
+    Removing stm32f1xx_hal_pwr.o(i.PWR_OverloadWfe), (6 bytes).
+    Removing stm32f1xx_hal_flash.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_flash.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_flash.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_flash.o(i.FLASH_Program_HalfWord), (28 bytes).
+    Removing stm32f1xx_hal_flash.o(i.FLASH_SetErrorCode), (92 bytes).
+    Removing stm32f1xx_hal_flash.o(i.FLASH_WaitForLastOperation), (84 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_EndOfOperationCallback), (2 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_GetError), (12 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_IRQHandler), (264 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_Lock), (20 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_OB_Launch), (4 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_OB_Lock), (20 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_OB_Unlock), (36 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_OperationErrorCallback), (2 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_Program), (128 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_Program_IT), (100 bytes).
+    Removing stm32f1xx_hal_flash.o(i.HAL_FLASH_Unlock), (40 bytes).
+    Removing stm32f1xx_hal_flash.o(.bss), (32 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.FLASH_MassErase), (36 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.FLASH_OB_DisableWRP), (176 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.FLASH_OB_EnableWRP), (176 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.FLASH_OB_GetRDP), (24 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.FLASH_OB_RDP_LevelConfig), (100 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.FLASH_PageErase), (36 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase), (168 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_Erase_IT), (84 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBErase), (84 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBGetConfig), (36 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBGetUserData), (32 bytes).
+    Removing stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram), (200 bytes).
+    Removing stm32f1xx_hal_exti.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_exti.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_exti.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_ClearConfigLine), (104 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_ClearPending), (20 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_GenerateSWI), (20 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_GetConfigLine), (144 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_GetHandle), (12 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_GetPending), (24 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_IRQHandler), (36 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_RegisterCallback), (14 bytes).
+    Removing stm32f1xx_hal_exti.o(i.HAL_EXTI_SetConfigLine), (164 bytes).
+    Removing stm32f1xx_hal_tim.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_tim.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_tim.o(.rrx_text), (6 bytes).
+    Removing stm32f1xx_hal_tim_ex.o(.rev16_text), (4 bytes).
+    Removing stm32f1xx_hal_tim_ex.o(.revsh_text), (4 bytes).
+    Removing stm32f1xx_hal_tim_ex.o(.rrx_text), (6 bytes).
+    Removing system_stm32f1xx.o(.rev16_text), (4 bytes).
+    Removing system_stm32f1xx.o(.revsh_text), (4 bytes).
+    Removing system_stm32f1xx.o(.rrx_text), (6 bytes).
+    Removing system_stm32f1xx.o(i.SystemCoreClockUpdate), (104 bytes).
+    Removing system_stm32f1xx.o(.constdata), (8 bytes).
+
+261 unused section(s) (total 13304 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../Core/Src/dma.c                        0x00000000   Number         0  dma.o ABSOLUTE
+    ../Core/Src/gpio.c                       0x00000000   Number         0  gpio.o ABSOLUTE
+    ../Core/Src/main.c                       0x00000000   Number         0  main.o ABSOLUTE
+    ../Core/Src/spi.c                        0x00000000   Number         0  spi.o ABSOLUTE
+    ../Core/Src/stm32f1xx_hal_msp.c          0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
+    ../Core/Src/stm32f1xx_it.c               0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
+    ../Core/Src/system_stm32f1xx.c           0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c 0x00000000   Number         0  stm32f1xx_hal_cortex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c 0x00000000   Number         0  stm32f1xx_hal_dma.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c 0x00000000   Number         0  stm32f1xx_hal_exti.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c 0x00000000   Number         0  stm32f1xx_hal_flash.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c 0x00000000   Number         0  stm32f1xx_hal_flash_ex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c 0x00000000   Number         0  stm32f1xx_hal_gpio.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c 0x00000000   Number         0  stm32f1xx_hal_gpio_ex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c 0x00000000   Number         0  stm32f1xx_hal_pwr.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c 0x00000000   Number         0  stm32f1xx_hal_rcc.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c 0x00000000   Number         0  stm32f1xx_hal_rcc_ex.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c 0x00000000   Number         0  stm32f1xx_hal_spi.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c 0x00000000   Number         0  stm32f1xx_hal_tim.o ABSOLUTE
+    ../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c 0x00000000   Number         0  stm32f1xx_hal_tim_ex.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/malloc/calloc.c         0x00000000   Number         0  calloc.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
+    ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
+    ../clib/microlib/stdlib/rand.c           0x00000000   Number         0  rand.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ..\Core\Src\dma.c                        0x00000000   Number         0  dma.o ABSOLUTE
+    ..\Core\Src\gpio.c                       0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\Core\Src\main.c                       0x00000000   Number         0  main.o ABSOLUTE
+    ..\Core\Src\spi.c                        0x00000000   Number         0  spi.o ABSOLUTE
+    ..\Core\Src\stm32f1xx_hal_msp.c          0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
+    ..\Core\Src\stm32f1xx_it.c               0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
+    ..\Core\Src\system_stm32f1xx.c           0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
+    ..\Core\Src\ws2812b.c                    0x00000000   Number         0  ws2812b.o ABSOLUTE
+    ..\Core\Src\ws2812b_fx.c                 0x00000000   Number         0  ws2812b_fx.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c 0x00000000   Number         0  stm32f1xx_hal_cortex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c 0x00000000   Number         0  stm32f1xx_hal_dma.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c 0x00000000   Number         0  stm32f1xx_hal_exti.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c 0x00000000   Number         0  stm32f1xx_hal_flash.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c 0x00000000   Number         0  stm32f1xx_hal_flash_ex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c 0x00000000   Number         0  stm32f1xx_hal_gpio.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c 0x00000000   Number         0  stm32f1xx_hal_gpio_ex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c 0x00000000   Number         0  stm32f1xx_hal_pwr.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c 0x00000000   Number         0  stm32f1xx_hal_rcc.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c 0x00000000   Number         0  stm32f1xx_hal_rcc_ex.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c 0x00000000   Number         0  stm32f1xx_hal_spi.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c 0x00000000   Number         0  stm32f1xx_hal_tim.o ABSOLUTE
+    ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c 0x00000000   Number         0  stm32f1xx_hal_tim_ex.o ABSOLUTE
+    ..\\Core\\Src\\ws2812b.c                 0x00000000   Number         0  ws2812b.o ABSOLUTE
+    ..\\Core\\Src\\ws2812b_fx.c              0x00000000   Number         0  ws2812b_fx.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    startup_stm32f103xe.s                    0x00000000   Number         0  startup_stm32f103xe.o ABSOLUTE
+    RESET                                    0x08000000   Section      304  startup_stm32f103xe.o(RESET)
+    .ARM.Collect$$$$00000000                 0x08000130   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x08000130   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x08000134   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x08000138   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x08000138   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x08000138   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x08000140   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x08000140   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x08000140   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x08000140   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x08000144   Section       36  startup_stm32f103xe.o(.text)
+    .text                                    0x08000168   Section        0  rand.o(.text)
+    .text                                    0x0800018c   Section        0  memseta.o(.text)
+    .text                                    0x080001b0   Section        0  calloc.o(.text)
+    .text                                    0x080001cc   Section       36  init.o(.text)
+    i.BusFault_Handler                       0x080001f0   Section        0  stm32f1xx_it.o(i.BusFault_Handler)
+    i.DMA1_Channel3_IRQHandler               0x080001f4   Section        0  stm32f1xx_it.o(i.DMA1_Channel3_IRQHandler)
+    i.DMA_SetConfig                          0x08000200   Section        0  stm32f1xx_hal_dma.o(i.DMA_SetConfig)
+    DMA_SetConfig                            0x08000201   Thumb Code    42  stm32f1xx_hal_dma.o(i.DMA_SetConfig)
+    i.DebugMon_Handler                       0x0800022a   Section        0  stm32f1xx_it.o(i.DebugMon_Handler)
+    i.Error_Handler                          0x0800022c   Section        0  main.o(i.Error_Handler)
+    i.HAL_DMA_Abort                          0x08000230   Section        0  stm32f1xx_hal_dma.o(i.HAL_DMA_Abort)
+    i.HAL_DMA_GetState                       0x08000276   Section        0  stm32f1xx_hal_dma.o(i.HAL_DMA_GetState)
+    i.HAL_DMA_IRQHandler                     0x0800027c   Section        0  stm32f1xx_hal_dma.o(i.HAL_DMA_IRQHandler)
+    i.HAL_DMA_Init                           0x080004c4   Section        0  stm32f1xx_hal_dma.o(i.HAL_DMA_Init)
+    i.HAL_DMA_Start_IT                       0x08000540   Section        0  stm32f1xx_hal_dma.o(i.HAL_DMA_Start_IT)
+    i.HAL_Delay                              0x080005b0   Section        0  stm32f1xx_hal.o(i.HAL_Delay)
+    i.HAL_GPIO_Init                          0x080005d4   Section        0  stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init)
+    i.HAL_GPIO_WritePin                      0x080007cc   Section        0  stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin)
+    i.HAL_GetTick                            0x080007d8   Section        0  stm32f1xx_hal.o(i.HAL_GetTick)
+    i.HAL_IncTick                            0x080007e4   Section        0  stm32f1xx_hal.o(i.HAL_IncTick)
+    i.HAL_Init                               0x080007f4   Section        0  stm32f1xx_hal.o(i.HAL_Init)
+    i.HAL_InitTick                           0x08000818   Section        0  stm32f1xx_hal.o(i.HAL_InitTick)
+    i.HAL_MspInit                            0x08000858   Section        0  stm32f1xx_hal_msp.o(i.HAL_MspInit)
+    i.HAL_NVIC_EnableIRQ                     0x08000894   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ)
+    i.HAL_NVIC_SetPriority                   0x080008b0   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
+    i.HAL_NVIC_SetPriorityGrouping           0x080008f0   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
+    i.HAL_RCC_ClockConfig                    0x08000914   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
+    i.HAL_RCC_GetSysClockFreq                0x08000a40   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
+    i.HAL_RCC_OscConfig                      0x08000aac   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig)
+    i.HAL_SPI_DMAStop                        0x08000dcc   Section        0  stm32f1xx_hal_spi.o(i.HAL_SPI_DMAStop)
+    i.HAL_SPI_ErrorCallback                  0x08000e0e   Section        0  stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback)
+    i.HAL_SPI_Init                           0x08000e10   Section        0  stm32f1xx_hal_spi.o(i.HAL_SPI_Init)
+    i.HAL_SPI_MspInit                        0x08000ec4   Section        0  spi.o(i.HAL_SPI_MspInit)
+    i.HAL_SPI_Transmit_DMA                   0x08000f58   Section        0  stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_DMA)
+    i.HAL_SPI_TxCpltCallback                 0x08001030   Section        0  ws2812b.o(i.HAL_SPI_TxCpltCallback)
+    i.HAL_SPI_TxHalfCpltCallback             0x080010e8   Section        0  ws2812b.o(i.HAL_SPI_TxHalfCpltCallback)
+    i.HAL_SYSTICK_Callback                   0x080011b8   Section        0  main.o(i.HAL_SYSTICK_Callback)
+    i.HAL_SYSTICK_Config                     0x080011bc   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config)
+    i.HardFault_Handler                      0x080011e4   Section        0  stm32f1xx_it.o(i.HardFault_Handler)
+    i.MX_DMA_Init                            0x080011e8   Section        0  dma.o(i.MX_DMA_Init)
+    i.MX_GPIO_Init                           0x08001214   Section        0  gpio.o(i.MX_GPIO_Init)
+    i.MX_SPI1_Init                           0x080012ac   Section        0  spi.o(i.MX_SPI1_Init)
+    i.MemManage_Handler                      0x080012f4   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
+    i.NMI_Handler                            0x080012f6   Section        0  stm32f1xx_it.o(i.NMI_Handler)
+    i.PendSV_Handler                         0x080012f8   Section        0  stm32f1xx_it.o(i.PendSV_Handler)
+    i.SPI_DMAError                           0x080012fa   Section        0  stm32f1xx_hal_spi.o(i.SPI_DMAError)
+    SPI_DMAError                             0x080012fb   Thumb Code    34  stm32f1xx_hal_spi.o(i.SPI_DMAError)
+    i.SPI_DMAHalfTransmitCplt                0x0800131c   Section        0  stm32f1xx_hal_spi.o(i.SPI_DMAHalfTransmitCplt)
+    SPI_DMAHalfTransmitCplt                  0x0800131d   Thumb Code    10  stm32f1xx_hal_spi.o(i.SPI_DMAHalfTransmitCplt)
+    i.SPI_DMATransmitCplt                    0x08001326   Section        0  stm32f1xx_hal_spi.o(i.SPI_DMATransmitCplt)
+    SPI_DMATransmitCplt                      0x08001327   Thumb Code   100  stm32f1xx_hal_spi.o(i.SPI_DMATransmitCplt)
+    i.SPI_EndRxTxTransaction                 0x0800138a   Section        0  stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction)
+    SPI_EndRxTxTransaction                   0x0800138b   Thumb Code    32  stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction)
+    i.SPI_WaitFlagStateUntilTimeout          0x080013ac   Section        0  stm32f1xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
+    SPI_WaitFlagStateUntilTimeout            0x080013ad   Thumb Code   180  stm32f1xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
+    i.SVC_Handler                            0x08001464   Section        0  stm32f1xx_it.o(i.SVC_Handler)
+    i.SysTick_Handler                        0x08001466   Section        0  stm32f1xx_it.o(i.SysTick_Handler)
+    i.SystemClock_Config                     0x08001474   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x080014d2   Section        0  system_stm32f1xx.o(i.SystemInit)
+    i.UsageFault_Handler                     0x080014d4   Section        0  stm32f1xx_it.o(i.UsageFault_Handler)
+    i.WS2812BFX_Callback                     0x080014d8   Section        0  ws2812b_fx.o(i.WS2812BFX_Callback)
+    i.WS2812BFX_HSVtoRGB                     0x08001538   Section        0  ws2812b_fx.o(i.WS2812BFX_HSVtoRGB)
+    i.WS2812BFX_Init                         0x080015d4   Section        0  ws2812b_fx.o(i.WS2812BFX_Init)
+    i.WS2812BFX_RGBtoHSV                     0x08001798   Section        0  ws2812b_fx.o(i.WS2812BFX_RGBtoHSV)
+    i.WS2812BFX_SetAll                       0x0800183c   Section        0  ws2812b_fx.o(i.WS2812BFX_SetAll)
+    i.WS2812BFX_SetAllRGB                    0x08001894   Section        0  ws2812b_fx.o(i.WS2812BFX_SetAllRGB)
+    i.WS2812BFX_SetColorRGB                  0x080018f4   Section        0  ws2812b_fx.o(i.WS2812BFX_SetColorRGB)
+    i.WS2812BFX_SetMode                      0x0800191c   Section        0  ws2812b_fx.o(i.WS2812BFX_SetMode)
+    i.WS2812BFX_SetSpeed                     0x0800198c   Section        0  ws2812b_fx.o(i.WS2812BFX_SetSpeed)
+    i.WS2812BFX_Start                        0x080019b8   Section        0  ws2812b_fx.o(i.WS2812BFX_Start)
+    i.WS2812BFX_SysTickCallback              0x080019ec   Section        0  ws2812b_fx.o(i.WS2812BFX_SysTickCallback)
+    i.WS2812B_GetColor                       0x08001a20   Section        0  ws2812b.o(i.WS2812B_GetColor)
+    i.WS2812B_GetPixels                      0x08001a40   Section        0  ws2812b.o(i.WS2812B_GetPixels)
+    i.WS2812B_Init                           0x08001a48   Section        0  ws2812b.o(i.WS2812B_Init)
+    i.WS2812B_Refresh                        0x08001a54   Section        0  ws2812b.o(i.WS2812B_Refresh)
+    i.WS2812B_SetDiodeColor                  0x08001a8c   Section        0  ws2812b.o(i.WS2812B_SetDiodeColor)
+    i.WS2812B_SetDiodeColorStruct            0x08001aa8   Section        0  ws2812b.o(i.WS2812B_SetDiodeColorStruct)
+    i.WS2812B_SetDiodeRGB                    0x08001ac8   Section        0  ws2812b.o(i.WS2812B_SetDiodeRGB)
+    i.__NVIC_SetPriority                     0x08001ae4   Section        0  stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x08001ae5   Thumb Code    32  stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x08001b04   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08001b12   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08001b14   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.blink                                  0x08001b24   Section        0  ws2812b_fx.o(i.blink)
+    i.chase                                  0x08001b7c   Section        0  ws2812b_fx.o(i.chase)
+    i.color_blend                            0x08001c98   Section        0  ws2812b_fx.o(i.color_blend)
+    i.color_wheel                            0x08001d0e   Section        0  ws2812b_fx.o(i.color_wheel)
+    i.color_wipe                             0x08001d54   Section        0  ws2812b_fx.o(i.color_wipe)
+    i.fade_out                               0x08001de4   Section        0  ws2812b_fx.o(i.fade_out)
+    i.fire_flicker                           0x08001ed8   Section        0  ws2812b_fx.o(i.fire_flicker)
+    i.fireworks                              0x08001f90   Section        0  ws2812b_fx.o(i.fireworks)
+    i.free                                   0x080020bc   Section        0  malloc.o(i.free)
+    i.get_random_wheel_index                 0x0800210c   Section        0  ws2812b_fx.o(i.get_random_wheel_index)
+    i.main                                   0x08002130   Section        0  main.o(i.main)
+    i.malloc                                 0x080021dc   Section        0  malloc.o(i.malloc)
+    i.mode_bicolor_chase                     0x08002248   Section        0  ws2812b_fx.o(i.mode_bicolor_chase)
+    i.mode_black_to_color                    0x08002268   Section        0  ws2812b_fx.o(i.mode_black_to_color)
+    i.mode_blink                             0x08002270   Section        0  ws2812b_fx.o(i.mode_blink)
+    i.mode_blink_rainbow                     0x08002290   Section        0  ws2812b_fx.o(i.mode_blink_rainbow)
+    i.mode_breath                            0x080022cc   Section        0  ws2812b_fx.o(i.mode_breath)
+    i.mode_chase_blackout                    0x08002388   Section        0  ws2812b_fx.o(i.mode_chase_blackout)
+    i.mode_chase_blackout_rainbow            0x080023a8   Section        0  ws2812b_fx.o(i.mode_chase_blackout_rainbow)
+    i.mode_chase_color                       0x080023ec   Section        0  ws2812b_fx.o(i.mode_chase_color)
+    i.mode_chase_flash                       0x08002410   Section        0  ws2812b_fx.o(i.mode_chase_flash)
+    i.mode_chase_flash_random                0x08002510   Section        0  ws2812b_fx.o(i.mode_chase_flash_random)
+    i.mode_chase_rainbow                     0x08002674   Section        0  ws2812b_fx.o(i.mode_chase_rainbow)
+    i.mode_chase_rainbow_white               0x080026bc   Section        0  ws2812b_fx.o(i.mode_chase_rainbow_white)
+    i.mode_chase_random                      0x08002730   Section        0  ws2812b_fx.o(i.mode_chase_random)
+    i.mode_chase_white                       0x08002790   Section        0  ws2812b_fx.o(i.mode_chase_white)
+    i.mode_circus_combustus                  0x080027b4   Section        0  ws2812b_fx.o(i.mode_circus_combustus)
+    i.mode_color_sweep_random                0x080027c4   Section        0  ws2812b_fx.o(i.mode_color_sweep_random)
+    i.mode_color_wipe                        0x08002830   Section        0  ws2812b_fx.o(i.mode_color_wipe)
+    i.mode_color_wipe_inv                    0x08002850   Section        0  ws2812b_fx.o(i.mode_color_wipe_inv)
+    i.mode_color_wipe_random                 0x08002870   Section        0  ws2812b_fx.o(i.mode_color_wipe_random)
+    i.mode_color_wipe_rev                    0x080028f0   Section        0  ws2812b_fx.o(i.mode_color_wipe_rev)
+    i.mode_color_wipe_rev_inv                0x08002910   Section        0  ws2812b_fx.o(i.mode_color_wipe_rev_inv)
+    i.mode_comet                             0x08002930   Section        0  ws2812b_fx.o(i.mode_comet)
+    i.mode_dual_scan                         0x080029a4   Section        0  ws2812b_fx.o(i.mode_dual_scan)
+    i.mode_fade                              0x08002a78   Section        0  ws2812b_fx.o(i.mode_fade)
+    i.mode_fire_flicker                      0x08002b24   Section        0  ws2812b_fx.o(i.mode_fire_flicker)
+    i.mode_fire_flicker_intense              0x08002b2a   Section        0  ws2812b_fx.o(i.mode_fire_flicker_intense)
+    i.mode_fire_flicker_soft                 0x08002b30   Section        0  ws2812b_fx.o(i.mode_fire_flicker_soft)
+    i.mode_fireworks                         0x08002b38   Section        0  ws2812b_fx.o(i.mode_fireworks)
+    i.mode_fireworks_random                  0x08002b54   Section        0  ws2812b_fx.o(i.mode_fireworks_random)
+    i.mode_flash_sparkle                     0x08002b68   Section        0  ws2812b_fx.o(i.mode_flash_sparkle)
+    i.mode_halloween                         0x08002c48   Section        0  ws2812b_fx.o(i.mode_halloween)
+    i.mode_hyper_sparkle                     0x08002c58   Section        0  ws2812b_fx.o(i.mode_hyper_sparkle)
+    i.mode_icu                               0x08002d34   Section        0  ws2812b_fx.o(i.mode_icu)
+    i.mode_larson_scanner                    0x08002f34   Section        0  ws2812b_fx.o(i.mode_larson_scanner)
+    i.mode_merry_christmas                   0x08002ff4   Section        0  ws2812b_fx.o(i.mode_merry_christmas)
+    i.mode_multi_dynamic                     0x08003000   Section        0  ws2812b_fx.o(i.mode_multi_dynamic)
+    i.mode_multi_strobe                      0x08003060   Section        0  ws2812b_fx.o(i.mode_multi_strobe)
+    i.mode_rainbow                           0x08003140   Section        0  ws2812b_fx.o(i.mode_rainbow)
+    i.mode_rainbow_cycle                     0x080031c4   Section        0  ws2812b_fx.o(i.mode_rainbow_cycle)
+    i.mode_random_color                      0x08003248   Section        0  ws2812b_fx.o(i.mode_random_color)
+    i.mode_running_color                     0x080032a0   Section        0  ws2812b_fx.o(i.mode_running_color)
+    i.mode_running_lights                    0x080032c0   Section        0  ws2812b_fx.o(i.mode_running_lights)
+    i.mode_running_random                    0x080033cc   Section        0  ws2812b_fx.o(i.mode_running_random)
+    i.mode_running_red_blue                  0x0800350c   Section        0  ws2812b_fx.o(i.mode_running_red_blue)
+    i.mode_scan                              0x08003514   Section        0  ws2812b_fx.o(i.mode_scan)
+    i.mode_single_dynamic                    0x080035d8   Section        0  ws2812b_fx.o(i.mode_single_dynamic)
+    i.mode_sparkle                           0x08003678   Section        0  ws2812b_fx.o(i.mode_sparkle)
+    i.mode_static                            0x080036fc   Section        0  ws2812b_fx.o(i.mode_static)
+    i.mode_strobe                            0x08003750   Section        0  ws2812b_fx.o(i.mode_strobe)
+    i.mode_strobe_rainbow                    0x08003770   Section        0  ws2812b_fx.o(i.mode_strobe_rainbow)
+    i.mode_theater_chase                     0x080037ac   Section        0  ws2812b_fx.o(i.mode_theater_chase)
+    i.mode_theater_chase_rainbow             0x080037cc   Section        0  ws2812b_fx.o(i.mode_theater_chase_rainbow)
+    i.mode_tricolor_chase                    0x080037fc   Section        0  ws2812b_fx.o(i.mode_tricolor_chase)
+    i.mode_twinkle                           0x0800381c   Section        0  ws2812b_fx.o(i.mode_twinkle)
+    i.mode_twinkle_fade                      0x0800383c   Section        0  ws2812b_fx.o(i.mode_twinkle_fade)
+    i.mode_twinkle_fade_random               0x08003858   Section        0  ws2812b_fx.o(i.mode_twinkle_fade_random)
+    i.mode_twinkle_random                    0x0800386c   Section        0  ws2812b_fx.o(i.mode_twinkle_random)
+    i.mode_white_to_color                    0x08003898   Section        0  ws2812b_fx.o(i.mode_white_to_color)
+    i.running                                0x080038a0   Section        0  ws2812b_fx.o(i.running)
+    i.sine8                                  0x08003934   Section        0  ws2812b.o(i.sine8)
+    i.theater_chase                          0x08003940   Section        0  ws2812b_fx.o(i.theater_chase)
+    i.to_color                               0x080039e4   Section        0  ws2812b_fx.o(i.to_color)
+    i.tricolor_chase                         0x08003b00   Section        0  ws2812b_fx.o(i.tricolor_chase)
+    i.twinkle                                0x08003bb0   Section        0  ws2812b_fx.o(i.twinkle)
+    i.twinkle_fade                           0x08003c78   Section        0  ws2812b_fx.o(i.twinkle_fade)
+    .constdata                               0x08003ce0   Section      512  ws2812b.o(.constdata)
+    _sineTable                               0x08003ce0   Data         256  ws2812b.o(.constdata)
+    _gammaTable                              0x08003de0   Data         256  ws2812b.o(.constdata)
+    .constdata                               0x08003ee0   Section       16  ws2812b_fx.o(.constdata)
+    rateMapH                                 0x08003ee0   Data           8  ws2812b_fx.o(.constdata)
+    rateMapL                                 0x08003ee8   Data           8  ws2812b_fx.o(.constdata)
+    .constdata                               0x08003ef0   Section       16  system_stm32f1xx.o(.constdata)
+    .data                                    0x20000000   Section        8  ws2812b.o(.data)
+    ResetSignal                              0x20000000   Data           1  ws2812b.o(.data)
+    CurrentLed                               0x20000002   Data           2  ws2812b.o(.data)
+    .data                                    0x20000008   Section      244  ws2812b_fx.o(.data)
+    trig                                     0x20000008   Data           1  ws2812b_fx.o(.data)
+    .data                                    0x200000fc   Section       12  stm32f1xx_hal.o(.data)
+    .data                                    0x20000108   Section        4  system_stm32f1xx.o(.data)
+    .data                                    0x2000010c   Section        4  rand.o(.data)
+    _rand_state                              0x2000010c   Data           4  rand.o(.data)
+    .data                                    0x20000110   Section        4  mvars.o(.data)
+    .data                                    0x20000114   Section        4  mvars.o(.data)
+    .bss                                     0x20000118   Section      156  spi.o(.bss)
+    .bss                                     0x200001b4   Section       72  ws2812b.o(.bss)
+    buffer                                   0x200001cc   Data          48  ws2812b.o(.bss)
+    .bss                                     0x200001fc   Section       56  ws2812b_fx.o(.bss)
+    HEAP                                     0x20000238   Section      512  startup_stm32f103xe.o(HEAP)
+    STACK                                    0x20000438   Section     1024  startup_stm32f103xe.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_Size                           0x00000130   Number         0  startup_stm32f103xe.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f103xe.o(RESET)
+    __Vectors_End                            0x08000130   Data           0  startup_stm32f103xe.o(RESET)
+    __main                                   0x08000131   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x08000131   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x08000135   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x08000139   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x08000139   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x08000139   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x08000139   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x08000141   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x08000141   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x08000145   Thumb Code     8  startup_stm32f103xe.o(.text)
+    ADC1_2_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    ADC3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    CAN1_RX1_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    CAN1_SCE_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel4_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel5_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel6_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA1_Channel7_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA2_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA2_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA2_Channel3_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    DMA2_Channel4_5_IRQHandler               0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI0_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI15_10_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI1_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI2_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI3_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI4_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    EXTI9_5_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    FLASH_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    FSMC_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    I2C1_ER_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    I2C1_EV_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    I2C2_ER_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    I2C2_EV_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    PVD_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    RCC_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    RTC_Alarm_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    RTC_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    SDIO_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    SPI1_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    SPI2_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    SPI3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TAMPER_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM1_BRK_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM1_CC_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM1_UP_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM2_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM4_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM5_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM6_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM7_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM8_BRK_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM8_CC_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM8_TRG_COM_IRQHandler                  0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    TIM8_UP_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    UART4_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    UART5_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USART1_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USART2_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USART3_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USBWakeUp_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    WWDG_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
+    rand                                     0x08000169   Thumb Code    20  rand.o(.text)
+    srand                                    0x0800017d   Thumb Code     6  rand.o(.text)
+    __aeabi_memset                           0x0800018d   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x0800018d   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x0800018d   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x0800019b   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x0800019b   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x0800019b   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x0800019f   Thumb Code    18  memseta.o(.text)
+    calloc                                   0x080001b1   Thumb Code    28  calloc.o(.text)
+    __scatterload                            0x080001cd   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x080001cd   Thumb Code     0  init.o(.text)
+    BusFault_Handler                         0x080001f1   Thumb Code     2  stm32f1xx_it.o(i.BusFault_Handler)
+    DMA1_Channel3_IRQHandler                 0x080001f5   Thumb Code     6  stm32f1xx_it.o(i.DMA1_Channel3_IRQHandler)
+    DebugMon_Handler                         0x0800022b   Thumb Code     2  stm32f1xx_it.o(i.DebugMon_Handler)
+    Error_Handler                            0x0800022d   Thumb Code     4  main.o(i.Error_Handler)
+    HAL_DMA_Abort                            0x08000231   Thumb Code    70  stm32f1xx_hal_dma.o(i.HAL_DMA_Abort)
+    HAL_DMA_GetState                         0x08000277   Thumb Code     6  stm32f1xx_hal_dma.o(i.HAL_DMA_GetState)
+    HAL_DMA_IRQHandler                       0x0800027d   Thumb Code   552  stm32f1xx_hal_dma.o(i.HAL_DMA_IRQHandler)
+    HAL_DMA_Init                             0x080004c5   Thumb Code   112  stm32f1xx_hal_dma.o(i.HAL_DMA_Init)
+    HAL_DMA_Start_IT                         0x08000541   Thumb Code   112  stm32f1xx_hal_dma.o(i.HAL_DMA_Start_IT)
+    HAL_Delay                                0x080005b1   Thumb Code    32  stm32f1xx_hal.o(i.HAL_Delay)
+    HAL_GPIO_Init                            0x080005d5   Thumb Code   462  stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init)
+    HAL_GPIO_WritePin                        0x080007cd   Thumb Code    10  stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin)
+    HAL_GetTick                              0x080007d9   Thumb Code     6  stm32f1xx_hal.o(i.HAL_GetTick)
+    HAL_IncTick                              0x080007e5   Thumb Code    12  stm32f1xx_hal.o(i.HAL_IncTick)
+    HAL_Init                                 0x080007f5   Thumb Code    32  stm32f1xx_hal.o(i.HAL_Init)
+    HAL_InitTick                             0x08000819   Thumb Code    54  stm32f1xx_hal.o(i.HAL_InitTick)
+    HAL_MspInit                              0x08000859   Thumb Code    52  stm32f1xx_hal_msp.o(i.HAL_MspInit)
+    HAL_NVIC_EnableIRQ                       0x08000895   Thumb Code    26  stm32f1xx_hal_cortex.o(i.HAL_NVIC_EnableIRQ)
+    HAL_NVIC_SetPriority                     0x080008b1   Thumb Code    60  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
+    HAL_NVIC_SetPriorityGrouping             0x080008f1   Thumb Code    26  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
+    HAL_RCC_ClockConfig                      0x08000915   Thumb Code   280  stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
+    HAL_RCC_GetSysClockFreq                  0x08000a41   Thumb Code    74  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
+    HAL_RCC_OscConfig                        0x08000aad   Thumb Code   778  stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig)
+    HAL_SPI_DMAStop                          0x08000dcd   Thumb Code    66  stm32f1xx_hal_spi.o(i.HAL_SPI_DMAStop)
+    HAL_SPI_ErrorCallback                    0x08000e0f   Thumb Code     2  stm32f1xx_hal_spi.o(i.HAL_SPI_ErrorCallback)
+    HAL_SPI_Init                             0x08000e11   Thumb Code   178  stm32f1xx_hal_spi.o(i.HAL_SPI_Init)
+    HAL_SPI_MspInit                          0x08000ec5   Thumb Code   128  spi.o(i.HAL_SPI_MspInit)
+    HAL_SPI_Transmit_DMA                     0x08000f59   Thumb Code   202  stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit_DMA)
+    HAL_SPI_TxCpltCallback                   0x08001031   Thumb Code   176  ws2812b.o(i.HAL_SPI_TxCpltCallback)
+    HAL_SPI_TxHalfCpltCallback               0x080010e9   Thumb Code   200  ws2812b.o(i.HAL_SPI_TxHalfCpltCallback)
+    HAL_SYSTICK_Callback                     0x080011b9   Thumb Code     4  main.o(i.HAL_SYSTICK_Callback)
+    HAL_SYSTICK_Config                       0x080011bd   Thumb Code    40  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config)
+    HardFault_Handler                        0x080011e5   Thumb Code     2  stm32f1xx_it.o(i.HardFault_Handler)
+    MX_DMA_Init                              0x080011e9   Thumb Code    40  dma.o(i.MX_DMA_Init)
+    MX_GPIO_Init                             0x08001215   Thumb Code   138  gpio.o(i.MX_GPIO_Init)
+    MX_SPI1_Init                             0x080012ad   Thumb Code    62  spi.o(i.MX_SPI1_Init)
+    MemManage_Handler                        0x080012f5   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
+    NMI_Handler                              0x080012f7   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
+    PendSV_Handler                           0x080012f9   Thumb Code     2  stm32f1xx_it.o(i.PendSV_Handler)
+    SVC_Handler                              0x08001465   Thumb Code     2  stm32f1xx_it.o(i.SVC_Handler)
+    SysTick_Handler                          0x08001467   Thumb Code    14  stm32f1xx_it.o(i.SysTick_Handler)
+    SystemClock_Config                       0x08001475   Thumb Code    94  main.o(i.SystemClock_Config)
+    SystemInit                               0x080014d3   Thumb Code     2  system_stm32f1xx.o(i.SystemInit)
+    UsageFault_Handler                       0x080014d5   Thumb Code     2  stm32f1xx_it.o(i.UsageFault_Handler)
+    WS2812BFX_Callback                       0x080014d9   Thumb Code    90  ws2812b_fx.o(i.WS2812BFX_Callback)
+    WS2812BFX_HSVtoRGB                       0x08001539   Thumb Code   156  ws2812b_fx.o(i.WS2812BFX_HSVtoRGB)
+    WS2812BFX_Init                           0x080015d5   Thumb Code   446  ws2812b_fx.o(i.WS2812BFX_Init)
+    WS2812BFX_RGBtoHSV                       0x08001799   Thumb Code   162  ws2812b_fx.o(i.WS2812BFX_RGBtoHSV)
+    WS2812BFX_SetAll                         0x0800183d   Thumb Code    84  ws2812b_fx.o(i.WS2812BFX_SetAll)
+    WS2812BFX_SetAllRGB                      0x08001895   Thumb Code    92  ws2812b_fx.o(i.WS2812BFX_SetAllRGB)
+    WS2812BFX_SetColorRGB                    0x080018f5   Thumb Code    34  ws2812b_fx.o(i.WS2812BFX_SetColorRGB)
+    WS2812BFX_SetMode                        0x0800191d   Thumb Code   104  ws2812b_fx.o(i.WS2812BFX_SetMode)
+    WS2812BFX_SetSpeed                       0x0800198d   Thumb Code    38  ws2812b_fx.o(i.WS2812BFX_SetSpeed)
+    WS2812BFX_Start                          0x080019b9   Thumb Code    48  ws2812b_fx.o(i.WS2812BFX_Start)
+    WS2812BFX_SysTickCallback                0x080019ed   Thumb Code    46  ws2812b_fx.o(i.WS2812BFX_SysTickCallback)
+    WS2812B_GetColor                         0x08001a21   Thumb Code    28  ws2812b.o(i.WS2812B_GetColor)
+    WS2812B_GetPixels                        0x08001a41   Thumb Code     4  ws2812b.o(i.WS2812B_GetPixels)
+    WS2812B_Init                             0x08001a49   Thumb Code     6  ws2812b.o(i.WS2812B_Init)
+    WS2812B_Refresh                          0x08001a55   Thumb Code    48  ws2812b.o(i.WS2812B_Refresh)
+    WS2812B_SetDiodeColor                    0x08001a8d   Thumb Code    24  ws2812b.o(i.WS2812B_SetDiodeColor)
+    WS2812B_SetDiodeColorStruct              0x08001aa9   Thumb Code    28  ws2812b.o(i.WS2812B_SetDiodeColorStruct)
+    WS2812B_SetDiodeRGB                      0x08001ac9   Thumb Code    22  ws2812b.o(i.WS2812B_SetDiodeRGB)
+    __scatterload_copy                       0x08001b05   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08001b13   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08001b15   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    blink                                    0x08001b25   Thumb Code    84  ws2812b_fx.o(i.blink)
+    chase                                    0x08001b7d   Thumb Code   278  ws2812b_fx.o(i.chase)
+    color_blend                              0x08001c99   Thumb Code   118  ws2812b_fx.o(i.color_blend)
+    color_wheel                              0x08001d0f   Thumb Code    70  ws2812b_fx.o(i.color_wheel)
+    color_wipe                               0x08001d55   Thumb Code   140  ws2812b_fx.o(i.color_wipe)
+    fade_out                                 0x08001de5   Thumb Code   234  ws2812b_fx.o(i.fade_out)
+    fire_flicker                             0x08001ed9   Thumb Code   178  ws2812b_fx.o(i.fire_flicker)
+    fireworks                                0x08001f91   Thumb Code   294  ws2812b_fx.o(i.fireworks)
+    free                                     0x080020bd   Thumb Code    76  malloc.o(i.free)
+    get_random_wheel_index                   0x0800210d   Thumb Code    36  ws2812b_fx.o(i.get_random_wheel_index)
+    main                                     0x08002131   Thumb Code   166  main.o(i.main)
+    malloc                                   0x080021dd   Thumb Code    92  malloc.o(i.malloc)
+    mode_bicolor_chase                       0x08002249   Thumb Code    26  ws2812b_fx.o(i.mode_bicolor_chase)
+    mode_black_to_color                      0x08002269   Thumb Code     6  ws2812b_fx.o(i.mode_black_to_color)
+    mode_blink                               0x08002271   Thumb Code    28  ws2812b_fx.o(i.mode_blink)
+    mode_blink_rainbow                       0x08002291   Thumb Code    54  ws2812b_fx.o(i.mode_blink_rainbow)
+    mode_breath                              0x080022cd   Thumb Code   184  ws2812b_fx.o(i.mode_breath)
+    mode_chase_blackout                      0x08002389   Thumb Code    28  ws2812b_fx.o(i.mode_chase_blackout)
+    mode_chase_blackout_rainbow              0x080023a9   Thumb Code    64  ws2812b_fx.o(i.mode_chase_blackout_rainbow)
+    mode_chase_color                         0x080023ed   Thumb Code    30  ws2812b_fx.o(i.mode_chase_color)
+    mode_chase_flash                         0x08002411   Thumb Code   252  ws2812b_fx.o(i.mode_chase_flash)
+    mode_chase_flash_random                  0x08002511   Thumb Code   350  ws2812b_fx.o(i.mode_chase_flash_random)
+    mode_chase_rainbow                       0x08002675   Thumb Code    66  ws2812b_fx.o(i.mode_chase_rainbow)
+    mode_chase_rainbow_white                 0x080026bd   Thumb Code   112  ws2812b_fx.o(i.mode_chase_rainbow_white)
+    mode_chase_random                        0x08002731   Thumb Code    90  ws2812b_fx.o(i.mode_chase_random)
+    mode_chase_white                         0x08002791   Thumb Code    30  ws2812b_fx.o(i.mode_chase_white)
+    mode_circus_combustus                    0x080027b5   Thumb Code    14  ws2812b_fx.o(i.mode_circus_combustus)
+    mode_color_sweep_random                  0x080027c5   Thumb Code   104  ws2812b_fx.o(i.mode_color_sweep_random)
+    mode_color_wipe                          0x08002831   Thumb Code    28  ws2812b_fx.o(i.mode_color_wipe)
+    mode_color_wipe_inv                      0x08002851   Thumb Code    28  ws2812b_fx.o(i.mode_color_wipe_inv)
+    mode_color_wipe_random                   0x08002871   Thumb Code   124  ws2812b_fx.o(i.mode_color_wipe_random)
+    mode_color_wipe_rev                      0x080028f1   Thumb Code    28  ws2812b_fx.o(i.mode_color_wipe_rev)
+    mode_color_wipe_rev_inv                  0x08002911   Thumb Code    28  ws2812b_fx.o(i.mode_color_wipe_rev_inv)
+    mode_comet                               0x08002931   Thumb Code   112  ws2812b_fx.o(i.mode_comet)
+    mode_dual_scan                           0x080029a5   Thumb Code   208  ws2812b_fx.o(i.mode_dual_scan)
+    mode_fade                                0x08002a79   Thumb Code   166  ws2812b_fx.o(i.mode_fade)
+    mode_fire_flicker                        0x08002b25   Thumb Code     6  ws2812b_fx.o(i.mode_fire_flicker)
+    mode_fire_flicker_intense                0x08002b2b   Thumb Code     6  ws2812b_fx.o(i.mode_fire_flicker_intense)
+    mode_fire_flicker_soft                   0x08002b31   Thumb Code     6  ws2812b_fx.o(i.mode_fire_flicker_soft)
+    mode_fireworks                           0x08002b39   Thumb Code    24  ws2812b_fx.o(i.mode_fireworks)
+    mode_fireworks_random                    0x08002b55   Thumb Code    20  ws2812b_fx.o(i.mode_fireworks_random)
+    mode_flash_sparkle                       0x08002b69   Thumb Code   220  ws2812b_fx.o(i.mode_flash_sparkle)
+    mode_halloween                           0x08002c49   Thumb Code     8  ws2812b_fx.o(i.mode_halloween)
+    mode_hyper_sparkle                       0x08002c59   Thumb Code   216  ws2812b_fx.o(i.mode_hyper_sparkle)
+    mode_icu                                 0x08002d35   Thumb Code   506  ws2812b_fx.o(i.mode_icu)
+    mode_larson_scanner                      0x08002f35   Thumb Code   186  ws2812b_fx.o(i.mode_larson_scanner)
+    mode_merry_christmas                     0x08002ff5   Thumb Code    10  ws2812b_fx.o(i.mode_merry_christmas)
+    mode_multi_dynamic                       0x08003001   Thumb Code    92  ws2812b_fx.o(i.mode_multi_dynamic)
+    mode_multi_strobe                        0x08003061   Thumb Code   220  ws2812b_fx.o(i.mode_multi_strobe)
+    mode_rainbow                             0x08003141   Thumb Code   128  ws2812b_fx.o(i.mode_rainbow)
+    mode_rainbow_cycle                       0x080031c5   Thumb Code   128  ws2812b_fx.o(i.mode_rainbow_cycle)
+    mode_random_color                        0x08003249   Thumb Code    84  ws2812b_fx.o(i.mode_random_color)
+    mode_running_color                       0x080032a1   Thumb Code    28  ws2812b_fx.o(i.mode_running_color)
+    mode_running_lights                      0x080032c1   Thumb Code   262  ws2812b_fx.o(i.mode_running_lights)
+    mode_running_random                      0x080033cd   Thumb Code   316  ws2812b_fx.o(i.mode_running_random)
+    mode_running_red_blue                    0x0800350d   Thumb Code     8  ws2812b_fx.o(i.mode_running_red_blue)
+    mode_scan                                0x08003515   Thumb Code   190  ws2812b_fx.o(i.mode_scan)
+    mode_single_dynamic                      0x080035d9   Thumb Code   156  ws2812b_fx.o(i.mode_single_dynamic)
+    mode_sparkle                             0x08003679   Thumb Code   126  ws2812b_fx.o(i.mode_sparkle)
+    mode_static                              0x080036fd   Thumb Code    80  ws2812b_fx.o(i.mode_static)
+    mode_strobe                              0x08003751   Thumb Code    28  ws2812b_fx.o(i.mode_strobe)
+    mode_strobe_rainbow                      0x08003771   Thumb Code    54  ws2812b_fx.o(i.mode_strobe_rainbow)
+    mode_theater_chase                       0x080037ad   Thumb Code    26  ws2812b_fx.o(i.mode_theater_chase)
+    mode_theater_chase_rainbow               0x080037cd   Thumb Code    42  ws2812b_fx.o(i.mode_theater_chase_rainbow)
+    mode_tricolor_chase                      0x080037fd   Thumb Code    26  ws2812b_fx.o(i.mode_tricolor_chase)
+    mode_twinkle                             0x0800381d   Thumb Code    26  ws2812b_fx.o(i.mode_twinkle)
+    mode_twinkle_fade                        0x0800383d   Thumb Code    24  ws2812b_fx.o(i.mode_twinkle_fade)
+    mode_twinkle_fade_random                 0x08003859   Thumb Code    20  ws2812b_fx.o(i.mode_twinkle_fade_random)
+    mode_twinkle_random                      0x0800386d   Thumb Code    40  ws2812b_fx.o(i.mode_twinkle_random)
+    mode_white_to_color                      0x08003899   Thumb Code     6  ws2812b_fx.o(i.mode_white_to_color)
+    running                                  0x080038a1   Thumb Code   142  ws2812b_fx.o(i.running)
+    sine8                                    0x08003935   Thumb Code     6  ws2812b.o(i.sine8)
+    theater_chase                            0x08003941   Thumb Code   158  ws2812b_fx.o(i.theater_chase)
+    to_color                                 0x080039e5   Thumb Code   278  ws2812b_fx.o(i.to_color)
+    tricolor_chase                           0x08003b01   Thumb Code   170  ws2812b_fx.o(i.tricolor_chase)
+    twinkle                                  0x08003bb1   Thumb Code   196  ws2812b_fx.o(i.twinkle)
+    twinkle_fade                             0x08003c79   Thumb Code    98  ws2812b_fx.o(i.twinkle_fade)
+    AHBPrescTable                            0x08003ef0   Data          16  system_stm32f1xx.o(.constdata)
+    Region$$Table$$Base                      0x08003f00   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08003f20   Number         0  anon$$obj.o(Region$$Table)
+    hspi_ws2812b                             0x20000004   Data           4  ws2812b.o(.data)
+    mRunning                                 0x20000009   Data           1  ws2812b_fx.o(.data)
+    mTriggered                               0x2000000a   Data           1  ws2812b_fx.o(.data)
+    mActualSegment                           0x2000000b   Data           1  ws2812b_fx.o(.data)
+    mSegments                                0x2000000c   Data           2  ws2812b_fx.o(.data)
+    Ws28b12b_Segments                        0x20000010   Data           4  ws2812b_fx.o(.data)
+    mMode                                    0x20000014   Data         232  ws2812b_fx.o(.data)
+    uwTickFreq                               0x200000fc   Data           1  stm32f1xx_hal.o(.data)
+    uwTickPrio                               0x20000100   Data           4  stm32f1xx_hal.o(.data)
+    uwTick                                   0x20000104   Data           4  stm32f1xx_hal.o(.data)
+    SystemCoreClock                          0x20000108   Data           4  system_stm32f1xx.o(.data)
+    __microlib_freelist                      0x20000110   Data           4  mvars.o(.data)
+    __microlib_freelist_initialised          0x20000114   Data           4  mvars.o(.data)
+    hspi1                                    0x20000118   Data          88  spi.o(.bss)
+    hdma_spi1_tx                             0x20000170   Data          68  spi.o(.bss)
+    ws2812b_array                            0x200001b4   Data          24  ws2812b.o(.bss)
+    mColor                                   0x200001fc   Data          32  ws2812b_fx.o(.bss)
+    mColor_w                                 0x2000021c   Data          24  ws2812b_fx.o(.bss)
+    __heap_base                              0x20000238   Data           0  startup_stm32f103xe.o(HEAP)
+    __heap_limit                             0x20000438   Data           0  startup_stm32f103xe.o(HEAP)
+    __initial_sp                             0x20000838   Data           0  startup_stm32f103xe.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000131
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004038, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003f20, Max: 0x00080000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000130   Data   RO            3    RESET               startup_stm32f103xe.o
+    0x08000130   0x08000130   0x00000000   Code   RO         2533  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x08000130   0x00000004   Code   RO         2573    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x08000134   0x00000004   Code   RO         2576    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         2578    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         2580    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x08000138   0x00000008   Code   RO         2581    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         2583    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         2585    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x08000140   0x00000004   Code   RO         2574    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000144   0x08000144   0x00000024   Code   RO            4    .text               startup_stm32f103xe.o
+    0x08000168   0x08000168   0x00000024   Code   RO         2538    .text               mc_w.l(rand.o)
+    0x0800018c   0x0800018c   0x00000024   Code   RO         2541    .text               mc_w.l(memseta.o)
+    0x080001b0   0x080001b0   0x0000001c   Code   RO         2571    .text               mc_w.l(calloc.o)
+    0x080001cc   0x080001cc   0x00000024   Code   RO         2593    .text               mc_w.l(init.o)
+    0x080001f0   0x080001f0   0x00000002   Code   RO          246    i.BusFault_Handler  stm32f1xx_it.o
+    0x080001f2   0x080001f2   0x00000002   PAD
+    0x080001f4   0x080001f4   0x0000000c   Code   RO          247    i.DMA1_Channel3_IRQHandler  stm32f1xx_it.o
+    0x08000200   0x08000200   0x0000002a   Code   RO         1865    i.DMA_SetConfig     stm32f1xx_hal_dma.o
+    0x0800022a   0x0800022a   0x00000002   Code   RO          248    i.DebugMon_Handler  stm32f1xx_it.o
+    0x0800022c   0x0800022c   0x00000004   Code   RO           13    i.Error_Handler     main.o
+    0x08000230   0x08000230   0x00000046   Code   RO         1866    i.HAL_DMA_Abort     stm32f1xx_hal_dma.o
+    0x08000276   0x08000276   0x00000006   Code   RO         1870    i.HAL_DMA_GetState  stm32f1xx_hal_dma.o
+    0x0800027c   0x0800027c   0x00000248   Code   RO         1871    i.HAL_DMA_IRQHandler  stm32f1xx_hal_dma.o
+    0x080004c4   0x080004c4   0x0000007c   Code   RO         1872    i.HAL_DMA_Init      stm32f1xx_hal_dma.o
+    0x08000540   0x08000540   0x00000070   Code   RO         1876    i.HAL_DMA_Start_IT  stm32f1xx_hal_dma.o
+    0x080005b0   0x080005b0   0x00000024   Code   RO         1494    i.HAL_Delay         stm32f1xx_hal.o
+    0x080005d4   0x080005d4   0x000001f8   Code   RO         1802    i.HAL_GPIO_Init     stm32f1xx_hal_gpio.o
+    0x080007cc   0x080007cc   0x0000000a   Code   RO         1806    i.HAL_GPIO_WritePin  stm32f1xx_hal_gpio.o
+    0x080007d6   0x080007d6   0x00000002   PAD
+    0x080007d8   0x080007d8   0x0000000c   Code   RO         1498    i.HAL_GetTick       stm32f1xx_hal.o
+    0x080007e4   0x080007e4   0x00000010   Code   RO         1504    i.HAL_IncTick       stm32f1xx_hal.o
+    0x080007f4   0x080007f4   0x00000024   Code   RO         1505    i.HAL_Init          stm32f1xx_hal.o
+    0x08000818   0x08000818   0x00000040   Code   RO         1506    i.HAL_InitTick      stm32f1xx_hal.o
+    0x08000858   0x08000858   0x0000003c   Code   RO          328    i.HAL_MspInit       stm32f1xx_hal_msp.o
+    0x08000894   0x08000894   0x0000001a   Code   RO         1962    i.HAL_NVIC_EnableIRQ  stm32f1xx_hal_cortex.o
+    0x080008ae   0x080008ae   0x00000002   PAD
+    0x080008b0   0x080008b0   0x00000040   Code   RO         1968    i.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x080008f0   0x080008f0   0x00000024   Code   RO         1969    i.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
+    0x08000914   0x08000914   0x0000012c   Code   RO         1662    i.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
+    0x08000a40   0x08000a40   0x0000006c   Code   RO         1671    i.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
+    0x08000aac   0x08000aac   0x00000320   Code   RO         1674    i.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
+    0x08000dcc   0x08000dcc   0x00000042   Code   RO         1170    i.HAL_SPI_DMAStop   stm32f1xx_hal_spi.o
+    0x08000e0e   0x08000e0e   0x00000002   Code   RO         1172    i.HAL_SPI_ErrorCallback  stm32f1xx_hal_spi.o
+    0x08000e10   0x08000e10   0x000000b2   Code   RO         1176    i.HAL_SPI_Init      stm32f1xx_hal_spi.o
+    0x08000ec2   0x08000ec2   0x00000002   PAD
+    0x08000ec4   0x08000ec4   0x00000094   Code   RO          205    i.HAL_SPI_MspInit   spi.o
+    0x08000f58   0x08000f58   0x000000d8   Code   RO         1188    i.HAL_SPI_Transmit_DMA  stm32f1xx_hal_spi.o
+    0x08001030   0x08001030   0x000000b8   Code   RO          352    i.HAL_SPI_TxCpltCallback  ws2812b.o
+    0x080010e8   0x080010e8   0x000000d0   Code   RO          353    i.HAL_SPI_TxHalfCpltCallback  ws2812b.o
+    0x080011b8   0x080011b8   0x00000004   Code   RO           14    i.HAL_SYSTICK_Callback  main.o
+    0x080011bc   0x080011bc   0x00000028   Code   RO         1973    i.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
+    0x080011e4   0x080011e4   0x00000002   Code   RO          249    i.HardFault_Handler  stm32f1xx_it.o
+    0x080011e6   0x080011e6   0x00000002   PAD
+    0x080011e8   0x080011e8   0x0000002c   Code   RO          180    i.MX_DMA_Init       dma.o
+    0x08001214   0x08001214   0x00000098   Code   RO          156    i.MX_GPIO_Init      gpio.o
+    0x080012ac   0x080012ac   0x00000048   Code   RO          206    i.MX_SPI1_Init      spi.o
+    0x080012f4   0x080012f4   0x00000002   Code   RO          250    i.MemManage_Handler  stm32f1xx_it.o
+    0x080012f6   0x080012f6   0x00000002   Code   RO          251    i.NMI_Handler       stm32f1xx_it.o
+    0x080012f8   0x080012f8   0x00000002   Code   RO          252    i.PendSV_Handler    stm32f1xx_it.o
+    0x080012fa   0x080012fa   0x00000022   Code   RO         1204    i.SPI_DMAError      stm32f1xx_hal_spi.o
+    0x0800131c   0x0800131c   0x0000000a   Code   RO         1206    i.SPI_DMAHalfTransmitCplt  stm32f1xx_hal_spi.o
+    0x08001326   0x08001326   0x00000064   Code   RO         1210    i.SPI_DMATransmitCplt  stm32f1xx_hal_spi.o
+    0x0800138a   0x0800138a   0x00000020   Code   RO         1214    i.SPI_EndRxTxTransaction  stm32f1xx_hal_spi.o
+    0x080013aa   0x080013aa   0x00000002   PAD
+    0x080013ac   0x080013ac   0x000000b8   Code   RO         1219    i.SPI_WaitFlagStateUntilTimeout  stm32f1xx_hal_spi.o
+    0x08001464   0x08001464   0x00000002   Code   RO          253    i.SVC_Handler       stm32f1xx_it.o
+    0x08001466   0x08001466   0x0000000e   Code   RO          254    i.SysTick_Handler   stm32f1xx_it.o
+    0x08001474   0x08001474   0x0000005e   Code   RO           15    i.SystemClock_Config  main.o
+    0x080014d2   0x080014d2   0x00000002   Code   RO         2499    i.SystemInit        system_stm32f1xx.o
+    0x080014d4   0x080014d4   0x00000002   Code   RO          255    i.UsageFault_Handler  stm32f1xx_it.o
+    0x080014d6   0x080014d6   0x00000002   PAD
+    0x080014d8   0x080014d8   0x00000060   Code   RO          451    i.WS2812BFX_Callback  ws2812b_fx.o
+    0x08001538   0x08001538   0x0000009c   Code   RO          459    i.WS2812BFX_HSVtoRGB  ws2812b_fx.o
+    0x080015d4   0x080015d4   0x000001c4   Code   RO          461    i.WS2812BFX_Init    ws2812b_fx.o
+    0x08001798   0x08001798   0x000000a2   Code   RO          466    i.WS2812BFX_RGBtoHSV  ws2812b_fx.o
+    0x0800183a   0x0800183a   0x00000002   PAD
+    0x0800183c   0x0800183c   0x00000058   Code   RO          473    i.WS2812BFX_SetAll  ws2812b_fx.o
+    0x08001894   0x08001894   0x00000060   Code   RO          474    i.WS2812BFX_SetAllRGB  ws2812b_fx.o
+    0x080018f4   0x080018f4   0x00000028   Code   RO          477    i.WS2812BFX_SetColorRGB  ws2812b_fx.o
+    0x0800191c   0x0800191c   0x00000070   Code   RO          479    i.WS2812BFX_SetMode  ws2812b_fx.o
+    0x0800198c   0x0800198c   0x0000002c   Code   RO          482    i.WS2812BFX_SetSpeed  ws2812b_fx.o
+    0x080019b8   0x080019b8   0x00000034   Code   RO          483    i.WS2812BFX_Start   ws2812b_fx.o
+    0x080019ec   0x080019ec   0x00000034   Code   RO          485    i.WS2812BFX_SysTickCallback  ws2812b_fx.o
+    0x08001a20   0x08001a20   0x00000020   Code   RO          354    i.WS2812B_GetColor  ws2812b.o
+    0x08001a40   0x08001a40   0x00000008   Code   RO          355    i.WS2812B_GetPixels  ws2812b.o
+    0x08001a48   0x08001a48   0x0000000c   Code   RO          356    i.WS2812B_Init      ws2812b.o
+    0x08001a54   0x08001a54   0x00000038   Code   RO          357    i.WS2812B_Refresh   ws2812b.o
+    0x08001a8c   0x08001a8c   0x0000001c   Code   RO          358    i.WS2812B_SetDiodeColor  ws2812b.o
+    0x08001aa8   0x08001aa8   0x00000020   Code   RO          359    i.WS2812B_SetDiodeColorStruct  ws2812b.o
+    0x08001ac8   0x08001ac8   0x0000001c   Code   RO          361    i.WS2812B_SetDiodeRGB  ws2812b.o
+    0x08001ae4   0x08001ae4   0x00000020   Code   RO         1975    i.__NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x08001b04   0x08001b04   0x0000000e   Code   RO         2597    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001b12   0x08001b12   0x00000002   Code   RO         2598    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001b14   0x08001b14   0x0000000e   Code   RO         2599    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001b22   0x08001b22   0x00000002   PAD
+    0x08001b24   0x08001b24   0x00000058   Code   RO          486    i.blink             ws2812b_fx.o
+    0x08001b7c   0x08001b7c   0x0000011c   Code   RO          487    i.chase             ws2812b_fx.o
+    0x08001c98   0x08001c98   0x00000076   Code   RO          488    i.color_blend       ws2812b_fx.o
+    0x08001d0e   0x08001d0e   0x00000046   Code   RO          489    i.color_wheel       ws2812b_fx.o
+    0x08001d54   0x08001d54   0x00000090   Code   RO          490    i.color_wipe        ws2812b_fx.o
+    0x08001de4   0x08001de4   0x000000f4   Code   RO          491    i.fade_out          ws2812b_fx.o
+    0x08001ed8   0x08001ed8   0x000000b8   Code   RO          492    i.fire_flicker      ws2812b_fx.o
+    0x08001f90   0x08001f90   0x0000012c   Code   RO          493    i.fireworks         ws2812b_fx.o
+    0x080020bc   0x080020bc   0x00000050   Code   RO         2543    i.free              mc_w.l(malloc.o)
+    0x0800210c   0x0800210c   0x00000024   Code   RO          494    i.get_random_wheel_index  ws2812b_fx.o
+    0x08002130   0x08002130   0x000000ac   Code   RO           16    i.main              main.o
+    0x080021dc   0x080021dc   0x0000006c   Code   RO         2544    i.malloc            mc_w.l(malloc.o)
+    0x08002248   0x08002248   0x00000020   Code   RO          495    i.mode_bicolor_chase  ws2812b_fx.o
+    0x08002268   0x08002268   0x00000006   Code   RO          496    i.mode_black_to_color  ws2812b_fx.o
+    0x0800226e   0x0800226e   0x00000002   PAD
+    0x08002270   0x08002270   0x00000020   Code   RO          497    i.mode_blink        ws2812b_fx.o
+    0x08002290   0x08002290   0x0000003c   Code   RO          498    i.mode_blink_rainbow  ws2812b_fx.o
+    0x080022cc   0x080022cc   0x000000bc   Code   RO          499    i.mode_breath       ws2812b_fx.o
+    0x08002388   0x08002388   0x00000020   Code   RO          500    i.mode_chase_blackout  ws2812b_fx.o
+    0x080023a8   0x080023a8   0x00000044   Code   RO          501    i.mode_chase_blackout_rainbow  ws2812b_fx.o
+    0x080023ec   0x080023ec   0x00000024   Code   RO          502    i.mode_chase_color  ws2812b_fx.o
+    0x08002410   0x08002410   0x00000100   Code   RO          503    i.mode_chase_flash  ws2812b_fx.o
+    0x08002510   0x08002510   0x00000164   Code   RO          504    i.mode_chase_flash_random  ws2812b_fx.o
+    0x08002674   0x08002674   0x00000048   Code   RO          505    i.mode_chase_rainbow  ws2812b_fx.o
+    0x080026bc   0x080026bc   0x00000074   Code   RO          506    i.mode_chase_rainbow_white  ws2812b_fx.o
+    0x08002730   0x08002730   0x00000060   Code   RO          507    i.mode_chase_random  ws2812b_fx.o
+    0x08002790   0x08002790   0x00000024   Code   RO          508    i.mode_chase_white  ws2812b_fx.o
+    0x080027b4   0x080027b4   0x0000000e   Code   RO          509    i.mode_circus_combustus  ws2812b_fx.o
+    0x080027c2   0x080027c2   0x00000002   PAD
+    0x080027c4   0x080027c4   0x0000006c   Code   RO          510    i.mode_color_sweep_random  ws2812b_fx.o
+    0x08002830   0x08002830   0x00000020   Code   RO          511    i.mode_color_wipe   ws2812b_fx.o
+    0x08002850   0x08002850   0x00000020   Code   RO          512    i.mode_color_wipe_inv  ws2812b_fx.o
+    0x08002870   0x08002870   0x00000080   Code   RO          513    i.mode_color_wipe_random  ws2812b_fx.o
+    0x080028f0   0x080028f0   0x00000020   Code   RO          514    i.mode_color_wipe_rev  ws2812b_fx.o
+    0x08002910   0x08002910   0x00000020   Code   RO          515    i.mode_color_wipe_rev_inv  ws2812b_fx.o
+    0x08002930   0x08002930   0x00000074   Code   RO          516    i.mode_comet        ws2812b_fx.o
+    0x080029a4   0x080029a4   0x000000d4   Code   RO          517    i.mode_dual_scan    ws2812b_fx.o
+    0x08002a78   0x08002a78   0x000000ac   Code   RO          518    i.mode_fade         ws2812b_fx.o
+    0x08002b24   0x08002b24   0x00000006   Code   RO          519    i.mode_fire_flicker  ws2812b_fx.o
+    0x08002b2a   0x08002b2a   0x00000006   Code   RO          520    i.mode_fire_flicker_intense  ws2812b_fx.o
+    0x08002b30   0x08002b30   0x00000006   Code   RO          521    i.mode_fire_flicker_soft  ws2812b_fx.o
+    0x08002b36   0x08002b36   0x00000002   PAD
+    0x08002b38   0x08002b38   0x0000001c   Code   RO          522    i.mode_fireworks    ws2812b_fx.o
+    0x08002b54   0x08002b54   0x00000014   Code   RO          523    i.mode_fireworks_random  ws2812b_fx.o
+    0x08002b68   0x08002b68   0x000000e0   Code   RO          524    i.mode_flash_sparkle  ws2812b_fx.o
+    0x08002c48   0x08002c48   0x00000010   Code   RO          525    i.mode_halloween    ws2812b_fx.o
+    0x08002c58   0x08002c58   0x000000dc   Code   RO          526    i.mode_hyper_sparkle  ws2812b_fx.o
+    0x08002d34   0x08002d34   0x00000200   Code   RO          527    i.mode_icu          ws2812b_fx.o
+    0x08002f34   0x08002f34   0x000000c0   Code   RO          528    i.mode_larson_scanner  ws2812b_fx.o
+    0x08002ff4   0x08002ff4   0x0000000a   Code   RO          529    i.mode_merry_christmas  ws2812b_fx.o
+    0x08002ffe   0x08002ffe   0x00000002   PAD
+    0x08003000   0x08003000   0x00000060   Code   RO          530    i.mode_multi_dynamic  ws2812b_fx.o
+    0x08003060   0x08003060   0x000000e0   Code   RO          531    i.mode_multi_strobe  ws2812b_fx.o
+    0x08003140   0x08003140   0x00000084   Code   RO          532    i.mode_rainbow      ws2812b_fx.o
+    0x080031c4   0x080031c4   0x00000084   Code   RO          533    i.mode_rainbow_cycle  ws2812b_fx.o
+    0x08003248   0x08003248   0x00000058   Code   RO          534    i.mode_random_color  ws2812b_fx.o
+    0x080032a0   0x080032a0   0x00000020   Code   RO          535    i.mode_running_color  ws2812b_fx.o
+    0x080032c0   0x080032c0   0x0000010c   Code   RO          536    i.mode_running_lights  ws2812b_fx.o
+    0x080033cc   0x080033cc   0x00000140   Code   RO          537    i.mode_running_random  ws2812b_fx.o
+    0x0800350c   0x0800350c   0x00000008   Code   RO          538    i.mode_running_red_blue  ws2812b_fx.o
+    0x08003514   0x08003514   0x000000c4   Code   RO          539    i.mode_scan         ws2812b_fx.o
+    0x080035d8   0x080035d8   0x000000a0   Code   RO          540    i.mode_single_dynamic  ws2812b_fx.o
+    0x08003678   0x08003678   0x00000084   Code   RO          541    i.mode_sparkle      ws2812b_fx.o
+    0x080036fc   0x080036fc   0x00000054   Code   RO          542    i.mode_static       ws2812b_fx.o
+    0x08003750   0x08003750   0x00000020   Code   RO          543    i.mode_strobe       ws2812b_fx.o
+    0x08003770   0x08003770   0x0000003c   Code   RO          544    i.mode_strobe_rainbow  ws2812b_fx.o
+    0x080037ac   0x080037ac   0x00000020   Code   RO          545    i.mode_theater_chase  ws2812b_fx.o
+    0x080037cc   0x080037cc   0x00000030   Code   RO          546    i.mode_theater_chase_rainbow  ws2812b_fx.o
+    0x080037fc   0x080037fc   0x00000020   Code   RO          547    i.mode_tricolor_chase  ws2812b_fx.o
+    0x0800381c   0x0800381c   0x00000020   Code   RO          548    i.mode_twinkle      ws2812b_fx.o
+    0x0800383c   0x0800383c   0x0000001c   Code   RO          549    i.mode_twinkle_fade  ws2812b_fx.o
+    0x08003858   0x08003858   0x00000014   Code   RO          550    i.mode_twinkle_fade_random  ws2812b_fx.o
+    0x0800386c   0x0800386c   0x0000002c   Code   RO          551    i.mode_twinkle_random  ws2812b_fx.o
+    0x08003898   0x08003898   0x00000006   Code   RO          552    i.mode_white_to_color  ws2812b_fx.o
+    0x0800389e   0x0800389e   0x00000002   PAD
+    0x080038a0   0x080038a0   0x00000094   Code   RO          553    i.running           ws2812b_fx.o
+    0x08003934   0x08003934   0x0000000c   Code   RO          363    i.sine8             ws2812b.o
+    0x08003940   0x08003940   0x000000a4   Code   RO          555    i.theater_chase     ws2812b_fx.o
+    0x080039e4   0x080039e4   0x0000011c   Code   RO          556    i.to_color          ws2812b_fx.o
+    0x08003b00   0x08003b00   0x000000b0   Code   RO          557    i.tricolor_chase    ws2812b_fx.o
+    0x08003bb0   0x08003bb0   0x000000c8   Code   RO          558    i.twinkle           ws2812b_fx.o
+    0x08003c78   0x08003c78   0x00000068   Code   RO          559    i.twinkle_fade      ws2812b_fx.o
+    0x08003ce0   0x08003ce0   0x00000200   Data   RO          365    .constdata          ws2812b.o
+    0x08003ee0   0x08003ee0   0x00000010   Data   RO          561    .constdata          ws2812b_fx.o
+    0x08003ef0   0x08003ef0   0x00000010   Data   RO         2500    .constdata          system_stm32f1xx.o
+    0x08003f00   0x08003f00   0x00000020   Data   RO         2595    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003f20, Size: 0x00000838, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08003f20   0x00000008   Data   RW          366    .data               ws2812b.o
+    0x20000008   0x08003f28   0x000000f4   Data   RW          562    .data               ws2812b_fx.o
+    0x200000fc   0x0800401c   0x0000000c   Data   RW         1512    .data               stm32f1xx_hal.o
+    0x20000108   0x08004028   0x00000004   Data   RW         2502    .data               system_stm32f1xx.o
+    0x2000010c   0x0800402c   0x00000004   Data   RW         2539    .data               mc_w.l(rand.o)
+    0x20000110   0x08004030   0x00000004   Data   RW         2591    .data               mc_w.l(mvars.o)
+    0x20000114   0x08004034   0x00000004   Data   RW         2592    .data               mc_w.l(mvars.o)
+    0x20000118        -       0x0000009c   Zero   RW          207    .bss                spi.o
+    0x200001b4        -       0x00000048   Zero   RW          364    .bss                ws2812b.o
+    0x200001fc        -       0x00000038   Zero   RW          560    .bss                ws2812b_fx.o
+    0x20000234   0x08004038   0x00000004   PAD
+    0x20000238        -       0x00000200   Zero   RW            2    HEAP                startup_stm32f103xe.o
+    0x20000438        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xe.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        44          4          0          0          0        834   dma.o
+       152         14          0          0          0       1011   gpio.o
+       274          6          0          0          0     456387   main.o
+       220         30          0          0        156       1770   spi.o
+        36          8        304          0       1536        780   startup_stm32f103xe.o
+       164         28          0         12          0       6461   stm32f1xx_hal.o
+       198         14          0          0          0      28803   stm32f1xx_hal_cortex.o
+       938         44          0          0          0       4862   stm32f1xx_hal_dma.o
+       514         42          0          0          0       2960   stm32f1xx_hal_gpio.o
+        60          8          0          0          0        950   stm32f1xx_hal_msp.o
+      1208         76          0          0          0       4102   stm32f1xx_hal_rcc.o
+       822         18          0          0          0       6688   stm32f1xx_hal_spi.o
+        42          6          0          0          0       4149   stm32f1xx_it.o
+         2          0         16          4          0       1171   system_stm32f1xx.o
+       600         58        512          8         72       6979   ws2812b.o
+      9604        358         16        244         56      48983   ws2812b_fx.o
+
+    ----------------------------------------------------------------------
+     14904        714        880        268       1824     576890   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        26          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        28          0          0          0          0         76   calloc.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+       188         20          0          0          0        160   malloc.o
+        36          0          0          0          0        108   memseta.o
+         0          0          0          8          0          0   mvars.o
+        36         10          0          4          0        136   rand.o
+
+    ----------------------------------------------------------------------
+       376         46          0         12          0        548   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       374         46          0         12          0        548   mc_w.l
+
+    ----------------------------------------------------------------------
+       376         46          0         12          0        548   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     15280        760        880        280       1824     570154   Grand Totals
+     15280        760        880        280       1824     570154   ELF Image Totals
+     15280        760        880        280          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                16160 (  15.78kB)
+    Total RW  Size (RW Data + ZI Data)              2104 (   2.05kB)
+    Total ROM Size (Code + RO Data + RW Data)      16440 (  16.05kB)
+
+==============================================================================
+
